@@ -49,18 +49,18 @@
         <div class="nav-docs section">
           <h5>Quick Start</h5>
           <ul>
-            <li><a href="../quickstart/dashboard.html">Dashboard</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#consumers">Consumers</a></li>
-            <li><a href="#cluster">Cluster</a></li>
-            <li><a href="#alarm">Alarm</a></li>
-            <li><a href="#shell">Shell</a></li>
-            <li><a href="#zkcli">ZkCli</a></li>
-            <li><a href="#multi">Multi-Cluster</a></li>
-            <li><a href="#ksql">KSQL</a></li>
-            <li><a href="#system">System</a></li>
-            <li><a href="#metrics">Metrics</a></li>
-            <li><a href="#bscreen">BScreen</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="consumers.html">Consumers</a></li>
+            <li><a href="cluster.html">Cluster</a></li>
+            <li><a href="alarm.html">Alarm</a></li>
+            <li><a href="shell.html">Shell</a></li>
+            <li><a href="zkcli.html">ZkCli</a></li>
+            <li><a href="multi.html">Multi-Cluster</a></li>
+            <li><a href="ksql.html">KSQL</a></li>
+            <li><a href="system.html">System</a></li>
+            <li><a href="metrics.html">Metrics</a></li>
+            <li><a href="bscreen.html">BScreen</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -81,24 +81,33 @@
         </div>
       </div>
       <div class="inner-content">
-        <h1>Install on Windows</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Install on Windows</div>
+        <h1>Alarm</h1>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Quick Start</a> > Alarm</div>
         <h2>Overview</h2>
-        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service up and running on your Windows system, and the installation package details.</p>
-        <h2>1. Install JDK</h2>
-        <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next steps. If there is no JDK, first to the Oracle official website to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-            target="_blank" style="text-decoration:none;">download JDK</a>.</p>
-        <h3>JAVA_HOME Configure</h3>
-        <p>Run the downloaded *.exe file installation package directly, then configure environment variables:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/jdk.jpg">
-        <h2>2. Check JDK</h2>
-        <p>Finally, we input <code>java -version</code>, according to the following information:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/chk_jdk.png">
-        <h2>3. KE_HOME Configure</h2>
-        <p>Configure environment variables,As shown in the following figure:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/ke_home_win.png">
-        <h3>4. Start the Kafka Eagle server</h3>
-        <p>Go to the <code>%KE_HOME%\bin</code> directory and click the <code>ke.bat</code> file.</p>
+        <p>New alarm module, to pay attention to their own Topic alarm settings. No consumer information when Topic, more than the threshold, the alarm. At present, the alarm way through the message to the alarm, set as shown in the following figure:</p>
+        <h2>Support IM</h2>
+        <p>In addition to supporting <code>email</code> or <code>webhook</code> alerts, Kafka Eagle also supports im alerts, such as <code>DingDing</code> and <code>WeChat</code>.</p>
+        <h2>Channel</h2>
+        <p>First of all, it is necessary to configure alarm channels, select different alarm modes, and divide different alarm groups.</p>
+        <img alt="mail" style="width:800px;" src="../../../images/docs/channel_mail@2x.png">
+        <p>It should be noted that Kafka Eagle alarm mail uri:</p>
+        <pre><code><span class="string">http://127.0.0.1:10086/email</span></code></pre>
+        <p>Email or Webhook restful api server uri:</p>
+        <pre><code><span class="string">http://127.0.0.1:10086/email?address="xxx@gmail.com"&msg="alarm msg"</span></code></pre>
+        <p>Api server uri java code:</p>
+        <pre><code>@RestController
+<span class="string">public class</span> MailController {
+    @RequestMapping(value="/email", method = RequestMethod.POST)
+    <span class="string">public String</span> sendPostMail(HttpServletRequest request) {
+        // Send Alarm Message Interface
+        System.out.println("[PUT] address: " + request.getParameter("address") + ",msg: " + request.getParameter("msg"));
+        return "OK";
+    }
+}</code></pre>
+        <h2>DingDing</h2>
+        <img alt="dingding" style="width:800px;" src="../../../images/docs/dingding_alert@2x.png">
+        <h2>WeChat</h2>
+        <img alt="wechat" style="width:800px;" src="../../../images/docs/wechat_alert@2x.png">
       </div>
     </section>
     <footer class="wrap">

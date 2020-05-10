@@ -49,18 +49,18 @@
         <div class="nav-docs section">
           <h5>Quick Start</h5>
           <ul>
-            <li><a href="../quickstart/dashboard.html">Dashboard</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#consumers">Consumers</a></li>
-            <li><a href="#cluster">Cluster</a></li>
-            <li><a href="#alarm">Alarm</a></li>
-            <li><a href="#shell">Shell</a></li>
-            <li><a href="#zkcli">ZkCli</a></li>
-            <li><a href="#multi">Multi-Cluster</a></li>
-            <li><a href="#ksql">KSQL</a></li>
-            <li><a href="#system">System</a></li>
-            <li><a href="#metrics">Metrics</a></li>
-            <li><a href="#bscreen">BScreen</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="consumers.html">Consumers</a></li>
+            <li><a href="cluster.html">Cluster</a></li>
+            <li><a href="alarm.html">Alarm</a></li>
+            <li><a href="shell.html">Shell</a></li>
+            <li><a href="zkcli.html">ZkCli</a></li>
+            <li><a href="multi.html">Multi-Cluster</a></li>
+            <li><a href="ksql.html">KSQL</a></li>
+            <li><a href="system.html">System</a></li>
+            <li><a href="metrics.html">Metrics</a></li>
+            <li><a href="bscreen.html">BScreen</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -81,24 +81,56 @@
         </div>
       </div>
       <div class="inner-content">
-        <h1>Install on Windows</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Install on Windows</div>
+        <h1>Shell</h1>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Quick Start</a> > Shell</div>
         <h2>Overview</h2>
-        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service up and running on your Windows system, and the installation package details.</p>
-        <h2>1. Install JDK</h2>
-        <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next steps. If there is no JDK, first to the Oracle official website to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-            target="_blank" style="text-decoration:none;">download JDK</a>.</p>
-        <h3>JAVA_HOME Configure</h3>
-        <p>Run the downloaded *.exe file installation package directly, then configure environment variables:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/jdk.jpg">
-        <h2>2. Check JDK</h2>
-        <p>Finally, we input <code>java -version</code>, according to the following information:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/chk_jdk.png">
-        <h2>3. KE_HOME Configure</h2>
-        <p>Configure environment variables,As shown in the following figure:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/ke_home_win.png">
-        <h3>4. Start the Kafka Eagle server</h3>
-        <p>Go to the <code>%KE_HOME%\bin</code> directory and click the <code>ke.bat</code> file.</p>
+        <p><code>$KE_HOME/bin/ke.sh</code> The following commands are included in the startup script:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Describe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ke.sh start</td>
+              <td>Start the Kafka Eagle server.</td>
+            </tr>
+            <tr>
+              <td>ke.sh status</td>
+              <td>View the Kafka Eagle running status.</td>
+            </tr>
+            <tr>
+              <td>ke.sh stop</td>
+              <td>Stop the Kafka Eagle server.</td>
+            </tr>
+            <tr>
+              <td>ke.sh restart</td>
+              <td>Restart the Kafka Eagle server.</td>
+            </tr>
+            <tr>
+              <td>ke.sh stats</td>
+              <td>View the Kafka Eagle number of handles in the linux os.</td>
+            </tr>
+            <tr>
+              <td>ke.sh find [ClassName]</td>
+              <td>Find the location of the class name in jar.</td>
+            </tr>
+            <tr>
+              <td>ke.sh gc</td>
+              <td>View the kafka eagle process gc.</td>
+            </tr>
+            <tr>
+              <td>ke.sh version</td>
+              <td>View the kafka eagle version.</td>
+            </tr>
+            <tr>
+              <td>ke.sh jdk</td>
+              <td>View kafka eagle installed jdk details.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <footer class="wrap">

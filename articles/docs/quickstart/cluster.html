@@ -49,18 +49,18 @@
         <div class="nav-docs section">
           <h5>Quick Start</h5>
           <ul>
-            <li><a href="../quickstart/dashboard.html">Dashboard</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#consumers">Consumers</a></li>
-            <li><a href="#cluster">Cluster</a></li>
-            <li><a href="#alarm">Alarm</a></li>
-            <li><a href="#shell">Shell</a></li>
-            <li><a href="#zkcli">ZkCli</a></li>
-            <li><a href="#multi">Multi-Cluster</a></li>
-            <li><a href="#ksql">KSQL</a></li>
-            <li><a href="#system">System</a></li>
-            <li><a href="#metrics">Metrics</a></li>
-            <li><a href="#bscreen">BScreen</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="consumers.html">Consumers</a></li>
+            <li><a href="cluster.html">Cluster</a></li>
+            <li><a href="alarm.html">Alarm</a></li>
+            <li><a href="shell.html">Shell</a></li>
+            <li><a href="zkcli.html">ZkCli</a></li>
+            <li><a href="multi.html">Multi-Cluster</a></li>
+            <li><a href="ksql.html">KSQL</a></li>
+            <li><a href="system.html">System</a></li>
+            <li><a href="metrics.html">Metrics</a></li>
+            <li><a href="bscreen.html">BScreen</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -81,52 +81,16 @@
         </div>
       </div>
       <div class="inner-content">
-        <h1>Kafka Eagle Requirements</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Requirements</div>
+        <h1>Cluster</h1>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Quick Start</a> > Cluster</div>
         <h2>Overview</h2>
-        <p>This page lists the minimum hardware and software requirements to install Kafka Eagle.</p>
-        <p>To run Kafka Eagle, you must have a supported operating system, hardware that meets or exceeds minimum requirements, a supported database, and a supported browser.</p>
-        <h2>Supported operating systems</h2>
-        <p>The following operating systems are supported for Kafka Eagle installation:</p>
+        <p>This module displays Kafka cluster information and Zookeeper cluster information, including the following:</p>
         <ul>
-          <li><a href="">Linux</a></li>
-          <li><a href="">macOS</a></li>
-          <li><a href="">Windows</a></li>
+          <li>Kafka broker host, IP, memory, version etc.</li>
+          <li>Zookeeper host, IP, status, version etc.</li>
         </ul>
-        <blockquote>
-          <strong>Note:<br/></strong>
-          We recommend that you install Kafka Eagle on the Linux operating system.
-        </blockquote>
-        <h2>Hardware recommendations</h2>
-        <p>Kafka Eagle does not use a lot of resources and is very lightweight in use of memory and CPU.</p>
-        <p>Minimum recommended memory: 2048 MB <br/>Minimum recommended CPU: 1</p>
-        <p>Some features might require more memory or CPUs. Features require more resources include:</p>
-        <ul>
-          <li><a href="">Server side rendering of images</a></li>
-          <li><a href="">Alerting</a></li>
-          <li><a href="">Scheduler</a></li>
-        </ul>
-        <h2>Supported databases</h2>
-        <p>Kafka Eagle requires a database to store its configuration data, such as users, data sources, and dashboards. The exact requirements depend on the size of the Kafka Eagle installation and features used.</p>
-        <p>Kafka Eagle supports the following databases:</p>
-        <ul>
-          <li><a href="">MySQL</a></li>
-          <li><a href="">SQLite</a></li>
-        </ul>
-        <p>By default, Kafka Eagle installs with and uses SQLite, which is an embedded database stored in the Kafka Eagle installation location.</p>
-        <h3>Supported web browsers</h3>
-        <p>Kafka Eagle is supported in the current version of the following browsers. Older versions of these browsers might not be supported, so you should always upgrade to the latest version when using Kafka Eagle:</p>
-        <ul>
-          <li><a href="">Chrome/Chromium</a></li>
-          <li><a href="">Firefox</a></li>
-          <li><a href="">Safari</a></li>
-          <li><a href="">Microsoft Edge</a></li>
-          <li><a href="">Internet Explorer 11</a></li>
-        </ul>
-        <blockquote>
-          <strong>Note:<br/></strong>
-          Always enable JavaScript in your browser. Running Kafka Eagle without JavaScript enabled in the browser is not supported.
-        </blockquote>
+        <p>As shown in the following figure:</p>
+        <img alt="cluster" style="width:800px;" src="../../../images/docs/cluster@2x.png">
       </div>
     </section>
     <footer class="wrap">
