@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="admin,dashboard,template,angular,bootstrap,blur,panel,html,css,javascript">
+  <title>Docs</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <link rel="stylesheet" href="../../../css/font-awesome.css">
+  <link rel="shortcut icon" href="../../../images/favicon.ico">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-main">
+      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+        <ul class="nav-site nav-site-internal">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li>
+          <!-- <li><a href="../docs/docs.html" class="active">Docs</a></li> -->
+          <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
+          <li><a href="../article/wechat.html">Articles</a></li>
+          <li><a href="../about/me.html">About</a></li>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
+      </div>
+    </div>
+    <section class="content wrap documentationContent">
+      <div class="nav-docs">
+        <div class="nav-docs section">
+          <h5>Introduce</h5>
+          <ul>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/getting-started.html">Getting Started</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>Installation</h5>
+          <ul>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="linux-macos.html">Install on Linux/macOS</a></li>
+            <li><a href="windows.html">Install on Windows</a></li>
+            <li><a href="configuration.html">Configuration</a></li>
+            <li><a href="#security">Security</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>Quick Start</h5>
+          <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#consumers">Consumers</a></li>
+            <li><a href="#cluster">Cluster</a></li>
+            <li><a href="#alarm">Alarm</a></li>
+            <li><a href="#shell">Shell</a></li>
+            <li><a href="#zkcli">ZkCli</a></li>
+            <li><a href="#multi">Multi-Cluster</a></li>
+            <li><a href="#ksql">KSQL</a></li>
+            <li><a href="#system">System</a></li>
+            <li><a href="#metrics">Metrics</a></li>
+            <li><a href="#bscreen">BScreen</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>Designed</h5>
+          <ul>
+            <li><a href="#dashboard">PartI</a></li>
+            <li><a href="#topics">PartII</a></li>
+            <li><a href="#consumers">PartIII</a></li>
+            <li><a href="#cluster">PartIV</a></li>
+            <li><a href="#alarm">PDF</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>ChangeLog</h5>
+          <ul>
+            <li><a href="">ChangeLog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner-content">
+        <h1>Install on Windows</h1>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Install on Windows</div>
+        <h2>Overview</h2>
+        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service up and running on your Windows system, and the installation package details.</p>
+        <h2>1. Install JDK</h2>
+        <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next steps. If there is no JDK, first to the Oracle official website to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+            target="_blank" style="text-decoration:none;">download JDK</a>.</p>
+        <h3>JAVA_HOME Configure</h3>
+        <p>Run the downloaded *.exe file installation package directly, then configure environment variables:</p>
+        <img alt="Startup" style="width:800px;" src="../../../images/docs/jdk.jpg">
+        <h2>2. Check JDK</h2>
+        <p>Finally, we input <code>java -version</code>, according to the following information:</p>
+        <img alt="Startup" style="width:800px;" src="../../../images/docs/chk_jdk.png">
+        <h2>3. KE_HOME Configure</h2>
+        <p>Configure environment variables,As shown in the following figure:</p>
+        <img alt="Startup" style="width:800px;" src="../../../images/docs/ke_home_win.png">
+        <h3>4. Start the Kafka Eagle server</h3>
+        <p>Go to the <code>%KE_HOME%\bin</code> directory and click the <code>ke.bat</code> file.</p>
+      </div>
+    </section>
+    <footer class="wrap">
+      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+    </footer>
+  </div>
+</body>
+
+</html>

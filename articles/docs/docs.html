@@ -1,303 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <meta name="keywords" content="admin,dashboard,template,angular,bootstrap,blur,panel,html,css,javascript">
-    <title>Docs</title>
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav-main">
-          <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
-            <ul class="nav-site nav-site-internal">
-              <li><a href="../../index.html">Home</a></li>
-              <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li>
-              <!-- <li><a href="../docs/docs.html" class="active">Docs</a></li> -->
-              <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
-              <li><a href="../article/wechat.html">Articles</a></li>
-              <li><a href="../about/me.html">About</a></li>
-            </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
-          </div>
-      </div>
-      <section class="content wrap documentationContent">
-        <div class="nav-docs">
-          <div class="nav-docs section">
-            <h5>Introduce</h5>
-            <ul>
-              <li><a href="#preface">Preface</a></li>
-              <li><a href="#overview">Overview</a></li>
-            </ul>
-          </div>
-          <div class="nav-docs section">
-            <h5>Installation</h5>
-            <ul>
-              <li><a href="#requirements">Requirements</a></li>
-              <li><a href="#linux">Install on Linux/macOS</a></li>
-              <li><a href="#windows">Install on Windows</a></li>
-              <li><a href="#security">Security</a></li>
-            </ul>
-          </div>
-          <div class="nav-docs section">
-            <h5>Quick Start</h5>
-            <ul>
-              <li><a href="#dashboard">Dashboard</a></li>
-              <li><a href="#topics">Topics</a></li>
-              <li><a href="#consumers">Consumers</a></li>
-              <li><a href="#cluster">Cluster</a></li>
-              <li><a href="#alarm">Alarm</a></li>
-              <li><a href="#shell">Shell</a></li>
-              <li><a href="#zkcli">ZkCli</a></li>
-              <li><a href="#multi">Multi-Cluster</a></li>
-              <li><a href="#ksql">KSQL</a></li>
-              <li><a href="#system">System</a></li>
-              <li><a href="#metrics">Metrics</a></li>
-              <li><a href="#bscreen">BScreen</a></li>
-            </ul>
-          </div>
-          <div class="nav-docs section">
-            <h5>Designed</h5>
-            <ul>
-              <li><a href="#dashboard">PartI</a></li>
-              <li><a href="#topics">PartII</a></li>
-              <li><a href="#consumers">PartIII</a></li>
-              <li><a href="#cluster">PartIV</a></li>
-              <li><a href="#alarm">PDF</a></li>
-            </ul>
-          </div>
-          <div class="nav-docs section">
-            <h5>ChangeLog</h5>
-            <ul>
-              <li><a href="">ChangeLog</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="inner-content">
-          <h1>Introduce</h1>
-          <div class="subHeader"></div><h2 id="profile">Preface</h2>
-<p>Kafka Eagle used to monitor the Kafka cluster in the case of Topic being consumed. Contains the production of Offset, Lag changes, the distribution of Partition, Owner, Topic was created and the time and the time to modify the information. In the use of the process if you encounter problems, you can contact the author. Of course, if you are interested, you can also participate in the development of the system to work.
-So, start reading from the catalog!</p>
-<h2 id="overview">Overview</h2>
-<p>In the development work, consumption in the Kafka cluster message, data change is our concern, when the premise of business is not complicated, we can use the Kafka command to provide tools with Zookeeper client tools, you can easily finish our work. With the complexity of the business, increase Group and Topic, then we use Kafka to provide command tools, already felt powerless, then the Kafka monitoring system at the moment is particularly important, we need to observe the details of consumer applications.
-<br/>
-<br/>
-Monitoring system industry has a lot of good open source monitoring system. We in the early days, the use of KafkaMonitor and Kafka Manager, but with the rapid development of business, as well as some specific requirements of Internet Co, the existing monitoring system of open source efficiency, and expand the use of DEVS in performance, and has been unable to meet the.
-<br/>
-<br/>
-Therefore, we in the past time, starting from the needs of the Internet Co, starting from the DEVS you use experience and feedback, combined with some of the industry's large open source Kafka message monitoring, starting with some thoughts on monitoring, design and development of the monitoring system now Kafka cluster message: Kafka Eagle.
-<br/>
-<br/>
-<strong>The goal of Kafka Eagle is to make a Kafka cluster message monitoring system that is convenient for use.</strong></p>
-<p>
-<br/>
-<h1>Installation</h1>
-<h2 id="requirements">Requirements</h2>
-<p>This page lists the minimum hardware and software requirements to install Kafka Eagle.
-<br/>
-<br/>
-To run Kafka Eagle, you must have a supported operating system, hardware that meets or exceeds minimum requirements, a supported database, and a supported browser</p>
-<h3>Supported operating systems</h3>
-<p>The following operating systems are supported for Kafka Eagle installation:</p>
-<ul>
-<li><a href="">Linux</a></li>
-<li><a href="">macOS</a></li>
-<li><a href="">Windows</a></li>
-</ul>
-<h3>Hardware recommendations</h3>
-<p>Kafka Eagle does not use a lot of resources and is very lightweight in use of memory and CPU.
-<br/>
-<br/>
-Minimum recommended memory: 2048 MB Minimum recommended CPU: 1
-<br/>
-<br/>
-Some features might require more memory or CPUs. Features require more resources include:</p>
-<ul>
-<li><a href="">Server side rendering of images</a></li>
-<li><a href="">Alerting</a></li>
-<li><a href="">Scheduler</a></li>
-</ul>
-<h3>Supported databases</h3>
-<p>Kafka Eagle requires a database to store its configuration data, such as users, data sources, and dashboards. The exact requirements depend on the size of the Kafka Eagle installation and features used.
-<br/>
-<br/>
-Kafka Eagle supports the following databases:</p>
-<ul>
-<li><a href="">MySQL</a></li>
-<li><a href="">SQLite</a></li>
-</ul>
-<p>By default, Kafka Eagle installs with and uses SQLite, which is an embedded database stored in the Kafka Eagle installation location.</p>
-<h3>Supported web browsers</h3>
-<p>Kafka Eagle is supported in the current version of the following browsers. Older versions of these browsers might not be supported, so you should always upgrade to the latest version when using Kafka Eagle:</p>
-<ul>
-<li><a href="">Chrome/Chromium</a></li>
-<li><a href="">Firefox</a></li>
-<li><a href="">Safari</a></li>
-<li><a href="">Microsoft Edge</a></li>
-<li><a href="">Internet Explorer 11</a></li>
-</ul>
-<blockquote>
-Note: Always enable JavaScript in your browser. Running Kafka Eagle without JavaScript enabled in the browser is not supported.
-</blockquote>
-<h2 id="linux">Install on Linux/macOS</h2>
-<p>This page lists the minimum rely on requirements to install Kafka Eagle.</p>
-<h3>Install JDK</h3>
-<p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the second section of the link. If there is no JDK, first to the Oracle official website to download JDK, <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Download</a>.</p>
-<h3>JAVA_HOME Configure</h3>
-<p>JDK extract can according to their actual situation to want to extract the path, here we extract to unzip <code>/usr/java/jdk1.8</code> , as shown below:</p>
-<blockquote>
-  cd /usr/java<br/>
-  tar -zxvf jdk-xxxx.tar.gz<br/>
-  mv jdk-xxxx jdk1.8<br/>
-  ...<br/>
-  vi /etc/profile<br/>
-  <br/>
-  export JAVA_HOME=/usr/java/jdk1.8<br/>
-  export PATH=$PATH:$JAVA_HOME/bin<br/>
-</blockquote>
-<p>Then, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.
-<blockquote>
-Note: If the authority is insufficient, please use the sudo command.
-</blockquote>
-Finally, we input <code>java -version</code>, according to the following information:</p>
-<blockquote>
-  java version "1.8.0_60"<br/>
-  Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br/>
-  Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)<br/>
-</blockquote>
-<h3>Download Kafka Eagle</h3>
-<ul>
-<li><a href="http://download.smartloli.org/" target="_blank">Download</a></li>
-<li><a href="https://github.com/smartloli/kafka-eagle" target="_blank">Github</a></li>
-</ul>
-<h3>Extract Kafka Eagle</h3>
-<p>Here we extract to <code>/data/soft/new</code> directory and extract, as shown below:</p>
-<blockquote>
-tar -zxvf kafka-eagle-${version}-bin.tar.gz
-</blockquote>
-If you have installed the version before, delete the modified version, and rename the current version, as shown below:
-<blockquote>
-rm -rf kafka-eagle<br/>
-mv kafka-eagle-${version} kafka-eagle<br/>
-</blockquote>
-<h3>Configure Kafka Eagle profile</h3>
-<blockquote>
-  vi /etc/profile<br/>
-  <br/>
-  export KE_HOME=/data/soft/new/kafka-eagle<br/>
-  export PATH=$PATH:$KE_HOME/bin<br/>
-</blockquote>
-<p>Then, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.</p>
-<h3>Configure Kafka Eagle system-config file</h3>
-<blockquote>
-cd ${KE_HOME}/conf<br/>
-vi system-config.properties<br/>
-<br/>
-<strong># Multi zookeeper & kafka cluster list.</strong><br/>
-kafka.eagle.zk.cluster.alias=cluster1,cluster2<br/>
-cluster1.zk.list=tdn1:2181,tdn2:2181,tdn3:2181<br/>
-cluster2.zk.list=xdn1:2181,xdn2:2181,xdn3:2181<br/>
-<br/>
-<strong># Kafka broker nodes online list</strong><br/>
-cluster1.kafka.eagle.broker.size=10<br/>
-cluster2.kafka.eagle.broker.size=20<br/>
-<br/>
-<strong># Kafka Eagle ZkCli limit</strong><br/>
-kafka.zk.limit.size=25<br/>
-<br/>
-<strong># Kafka Eagle webui port.</strong><br/>
-kafka.eagle.webui.port=8048<br/>
-<br/>
-<strong># Kafka offset storage.</strong><br/>
-cluster1.kafka.eagle.offset.storage=kafka<br/>
-cluster2.kafka.eagle.offset.storage=kafka<br/>
-<br/>
-<strong># Whether the Kafka performance monitoring diagram is enabled.</strong><br/>
-kafka.eagle.metrics.charts=false<br/>
-<br/>
-<strong># Kafka Eagle keeps data for 30 days by default.</strong><br/>
-kafka.eagle.metrics.retain=30<br/>
-<br/>
-<strong># If offset is out of range occurs, enable this property.</strong><br/>
-kafka.eagle.sql.fix.error=false<br/>
-kafka.eagle.sql.topic.records.max=5000<br/>
-<br/>
-<strong># Delete kafka topic token.</strong><br/>
-kafka.eagle.topic.token=keadmin<br/>
-<br/>
-<strong># Kafka sasl authenticate.</strong><br/>
-cluster1.kafka.eagle.sasl.enable=false<br/>
-cluster1.kafka.eagle.sasl.protocol=SASL_PLAINTEXT<br/>
-cluster1.kafka.eagle.sasl.mechanism=SCRAM-SHA-256<br/>
-cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.scram<br/>.ScramLoginModule required username="admin" password="admin-secret";<br/>
-<strong># If not set, the value can be empty.</strong><br/>
-cluster1.kafka.eagle.sasl.client.id=<br/>
-<strong># Add kafka cluster cgroups</strong><br/>
-cluster1.kafka.eagle.sasl.cgroup.enable=false<br/>
-cluster1.kafka.eagle.sasl.cgroup.topics=kafka_ads01,kafka_ads02<br/>
-<br/>
-cluster2.kafka.eagle.sasl.enable=true<br/>
-cluster2.kafka.eagle.sasl.protocol=SASL_PLAINTEXT<br/>
-cluster2.kafka.eagle.sasl.mechanism=PLAIN<br/>
-cluster2.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.plain<br/>.PlainLoginModule required username="admin" password="admin-secret";<br/>
-cluster2.kafka.eagle.sasl.client.id=<br/>
-cluster2.kafka.eagle.sasl.cgroup.enable=false<br/>
-cluster2.kafka.eagle.sasl.cgroup.topics=kafka_ads03,kafka_ads04<br/>
-<br/>
-cluster3.kafka.eagle.ssl.enable=false<br/>
-cluster3.kafka.eagle.ssl.protocol=SSL<br/>
-cluster3.kafka.eagle.ssl.truststore.location=/data/certificates/kafka.truststore<br/>
-cluster3.kafka.eagle.ssl.truststore.password=ke123456<br/>
-cluster3.kafka.eagle.ssl.keystore.location=/data/certificates/kafka.keystore<br/>
-cluster3.kafka.eagle.ssl.keystore.password=ke123456<br/>
-cluster3.kafka.eagle.ssl.key.password=ke123456<br/>
-cluster3.kafka.eagle.ssl.cgroup.enable=false<br/>
-cluster3.kafka.eagle.ssl.cgroup.topics=kafka_ads05,kafka_ads06<br/>
-<br/>
-<strong># Default use sqlite to store data.</strong><br/>
-kafka.eagle.driver=org.sqlite.JDBC<br/>
-<strong># It is important to note that the '/hadoop/kafka-eagle/db' path must exist.</strong><br/>
-kafka.eagle.url=jdbc:sqlite:/hadoop/kafka-eagle/db/ke.db<br/>
-kafka.eagle.username=root<br/>
-kafka.eagle.password=smartloli<br/>
-<br/>
-<strong># <Optional> set mysql address.</strong><br/>
-#kafka.eagle.driver=com.mysql.jdbc.Driver<br/>
-#kafka.eagle.url=jdbc:mysql://127.0.0.1:3306/ke?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull<br/>
-#kafka.eagle.username=root<br/>
-#kafka.eagle.password=smartloli<br/>
-</blockquote>
-<h3>Start Kafka Eagle</h3>
-<blockquote>
-cd ${KE_HOME}/bin<br/>
-chmod +x ke.sh<br/>
-./ke.sh start<br/>
-</blockquote>
-<p>As shown in the following figure:</p>
-<img alt="Startup" style="width:800px;" src="../../images/docs/startup@2x.png">
-<h2 id="windows">Install on Windows</h2>
-<p>This page lists the minimum rely on requirements to install Kafka Eagle.</p>
-<h3>Install JDK</h3>
-<p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the second section of the link. If there is no JDK, first to the Oracle official website to download JDK, <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Download</a>.</p>
-<h3>JAVA_HOME Configure</h3>
-<p>Run the downloaded <code>*.exe</code> file installation package directly, then configure environment variables:</p>
-<img alt="Startup" style="width:800px;" src="../../images/docs/jdk.jpg">
-<h3>Check JDK</h3>
-<p>Finally, we input <code>java -version</code>, according to the following information:</p>
-<img alt="Startup" style="width:800px;" src="../../images/docs/chk_jdk.png">
-<h3>KE_HOME Configure</h3>
-<p>Configure environment variables,As shown in the following figure:</p>
-<img alt="Startup" style="width:800px;" src="../../images/docs/ke_home_win.png">
-<h3>Start Kafka Eagle</h3>
-<p>Go to the <code>%KE_HOME%\bin</code> directory and click the <code>ke.bat</code> file.</p>
 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="admin,dashboard,template,angular,bootstrap,blur,panel,html,css,javascript">
+  <title>Docs</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/docs.css">
+  <link rel="stylesheet" href="../../css/font-awesome.css">
+  <link rel="shortcut icon" href="../../images/favicon.ico">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-main">
+      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+        <ul class="nav-site nav-site-internal">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li>
+          <!-- <li><a href="../docs/docs.html" class="active">Docs</a></li> -->
+          <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
+          <li><a href="../article/wechat.html">Articles</a></li>
+          <li><a href="../about/me.html">About</a></li>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
+      </div>
     </div>
+    <section class="content wrap documentationContent">
+      <div class="nav-docs">
+        <div class="nav-docs section">
+          <h5>Introduce</h5>
+          <ul>
+            <li><a href="introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="introduce/getting-started.html">Getting Started</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>Installation</h5>
+          <ul>
+            <li><a href="installation/requirements.html">Requirements</a></li>
+            <li><a href="installation/linux-macos.html">Install on Linux/macOS</a></li>
+            <li><a href="installation/windows.html">Install on Windows</a></li>
+            <li><a href="installation/configuration.html">Configuration</a></li>
+            <li><a href="installation/security">Security</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>Quick Start</h5>
+          <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#consumers">Consumers</a></li>
+            <li><a href="#cluster">Cluster</a></li>
+            <li><a href="#alarm">Alarm</a></li>
+            <li><a href="#shell">Shell</a></li>
+            <li><a href="#zkcli">ZkCli</a></li>
+            <li><a href="#multi">Multi-Cluster</a></li>
+            <li><a href="#ksql">KSQL</a></li>
+            <li><a href="#system">System</a></li>
+            <li><a href="#metrics">Metrics</a></li>
+            <li><a href="#bscreen">BScreen</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>Designed</h5>
+          <ul>
+            <li><a href="#dashboard">PartI</a></li>
+            <li><a href="#topics">PartII</a></li>
+            <li><a href="#consumers">PartIII</a></li>
+            <li><a href="#cluster">PartIV</a></li>
+            <li><a href="#alarm">PDF</a></li>
+          </ul>
+        </div>
+        <div class="nav-docs section">
+          <h5>ChangeLog</h5>
+          <ul>
+            <li><a href="">ChangeLog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner-content">
+        <h1>Kafka Eagle Documentation</h1>
+        <div class="subHeader"></div>
+        <h2>Installing Kafka Eagle</h2>
+        <div class="nav-cards">
+          <a href="#" style="text-decoration:none;" class="nav-cards__item nav-cards__item--install">
+            <div class="nav-cards__icon fa fa-linux">
+            </div>
+            <h5>Install on Linux</h5>
+          </a>
+          <a href="#" style="text-decoration:none;" class="nav-cards__item nav-cards__item--install">
+            <div class="nav-cards__icon fa fa-apple">
+            </div>
+            <h5>Install on macOS</h5>
+          </a>
+          <a href="#" style="text-decoration:none;" class="nav-cards__item nav-cards__item--install">
+            <div class="nav-cards__icon fa fa-windows">
+            </div>
+            <h5>Install on Windows</h5>
+          </a>
+        </div>
+        <h2>Guides</h2>
+        <div class="nav-cards">
+          <a href="#" style="text-decoration:none;" class="nav-cards__item nav-cards__item--install">
+            <h4>What is Kafka Eagle?</h4>
+            <p>Get an overview of Kakfa Eagle's key features.</p>
+          </a>
+          <a href="#" style="text-decoration:none;" class="nav-cards__item nav-cards__item--install">
+            <h4>Getting started</h4>
+            <p>Learn the basics of using Kafka Eagle.</p>
+          </a>
+          <a href="#" style="text-decoration:none;" class="nav-cards__item nav-cards__item--install">
+            <h4>Configure Kafka Eagle</h4>
+            <p>Review the configuration and setup options.</p>
+          </a>
+        </div>
+      </div>
     </section>
-      <footer class="wrap">
-        <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
-      </footer>
-    </div>
-  </body>
+    <footer class="wrap">
+      <div class="center">Copyright © 2020 all right reserved, powered by <a href="http://www.kafka-eagle.org/" target="_blank">smartloli</a>.</div>
+    </footer>
+  </div>
+</body>
+
 </html>
