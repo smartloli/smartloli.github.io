@@ -42,7 +42,8 @@
             <li><a href="linux-macos.html">Install on Linux/macOS</a></li>
             <li><a href="windows.html">Install on Windows</a></li>
             <li><a href="configuration.html">Configuration</a></li>
-            <li><a href="#security">Security</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="upgrade.html">Upgrade Kafka Eagle</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -75,7 +76,7 @@
         <div class="nav-docs section">
           <h5>ChangeLog</h5>
           <ul>
-            <li><a href="">ChangeLog</a></li>
+            <li><a href="../changelog/changelog.html">ChangeLog</a></li>
           </ul>
         </div>
       </div>
@@ -84,7 +85,159 @@
         <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Configuration</div>
         <h2>Overview</h2>
         <p>Kafka Eagle has a number of configuration options that you can specify in a <code>.properties</code> configuration file or specified using environment variables.</p>
-
+        <blockquote>
+          <strong>Note:</strong><br/>
+          You must restart Kakfa Eagle for any configuration changes to take effect.
+        </blockquote>
+        <h2>Config file locations</h2>
+        <p>Do not rename <code>system-config.properties</code>! Kafka Eagle defaults are stored in this file.</p>
+        <h3>Base Common</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Default</th>
+              <th>Describe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>kafka.eagle.zk.cluster.alias</td>
+              <td>cluster1,cluster2</td>
+              <td>Kafka multi cluster alias attribute.</td>
+            </tr>
+            <tr>
+              <td>cluster1.zk.list</td>
+              <td>ke01:2181,ke02:2181,ke03:2181/cluster1</td>
+              <td>Kafka cluster1 zookeeper address.</td>
+            </tr>
+            <tr>
+              <td>cluster2.zk.list</td>
+              <td>ke01:2181,ke02:2181,ke03:2181/cluster2</td>
+              <td>Kafka cluster2 zookeeper address.</td>
+            </tr>
+            <tr>
+              <td>kafka.zk.limit.size</td>
+              <td>25</td>
+              <td>Kafka Eagle maximum number of connections for the Zookeeper client.</td>
+            </tr>
+            <tr>
+              <td>cluster1.kafka.eagle.broker.size</td>
+              <td>10</td>
+              <td>Kafka broker size online list.</td>
+            </tr>
+            <tr>
+              <td>cluster2.kafka.eagle.broker.size</td>
+              <td>20</td>
+              <td>Kafka broker size online list.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.webui.port</td>
+              <td>8048</td>
+              <td>Kafka Eagle webui port.</td>
+            </tr>
+            <tr>
+              <td>cluster1.kafka.eagle.offset.storage</td>
+              <td>kafka</td>
+              <td>Kafka offsets stored in kafka.</td>
+            </tr>
+            <tr>
+              <td>cluster1.kafka.eagle.offset.storage</td>
+              <td>zk</td>
+              <td>Kafka offsets stored in zookeeper.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.metrics.charts</td>
+              <td>false</td>
+              <td>Kafka Eagle default disable metrics.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.metrics.retain</td>
+              <td>30</td>
+              <td>Kafka Eagle default retain metrics data.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.sql.fix.error</td>
+              <td>false</td>
+              <td>Kafka Eagle default disable fixed kafka sql query error.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.sql.topic.records.max</td>
+              <td>5000</td>
+              <td>Kafka Eagle SQL query topic max records.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.topic.token	</td>
+              <td>keadmin</td>
+              <td>Kafka Eagle delete topic token.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Database Property</h3>
+        <h4>MySQL</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Default</th>
+              <th>Describe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>kafka.eagle.driver</td>
+              <td>com.mysql.jdbc.Driver</td>
+              <td>Kafka Eagle store database driver.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.url</td>
+              <td>jdbc:mysql://127.0.0.1:3306/ke3?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull</td>
+              <td>Kafka Eagle store database url.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.username</td>
+              <td>root</td>
+              <td>Kafka Eagle store database username.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.password</td>
+              <td>123456</td>
+              <td>Kafka Eagle store database password.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>SQLite</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Default</th>
+              <th>Describe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>kafka.eagle.driver</td>
+              <td>org.sqlite.JDBC</td>
+              <td>Kafka Eagle store database driver.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.url</td>
+              <td>jdbc:sqlite:/hadoop/kafka-eagle/db/ke.db</td>
+              <td>Kafka Eagle store database url.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.username</td>
+              <td>root</td>
+              <td>Kafka Eagle store database username.</td>
+            </tr>
+            <tr>
+              <td>kafka.eagle.password</td>
+              <td>123456</td>
+              <td>Kafka Eagle store database password.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <footer class="wrap">

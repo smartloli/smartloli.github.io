@@ -81,24 +81,39 @@
         </div>
       </div>
       <div class="inner-content">
-        <h1>Install on Windows</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Install on Windows</div>
+        <h1>Upgrade Kafka Eagle</h1>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Upgrade Kafka Eagle</div>
         <h2>Overview</h2>
-        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service up and running on your Windows system, and the installation package details.</p>
-        <h2>1. Install JDK</h2>
-        <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next steps. If there is no JDK, first to the Oracle official website to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-            target="_blank" style="text-decoration:none;">download JDK</a>.</p>
-        <h3>JAVA_HOME Configure</h3>
-        <p>Run the downloaded *.exe file installation package directly, then configure environment variables:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/jdk.jpg">
-        <h2>2. Check JDK</h2>
-        <p>Finally, we input <code>java -version</code>, according to the following information:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/chk_jdk.png">
-        <h2>3. KE_HOME Configure</h2>
-        <p>Configure environment variables,As shown in the following figure:</p>
-        <img alt="Startup" style="width:800px;" src="../../../images/docs/ke_home_win.png">
-        <h3>4. Start the Kafka Eagle server</h3>
-        <p>Go to the <code>%KE_HOME%\bin</code> directory and click the <code>ke.bat</code> file.</p>
+        <p>We recommend that you upgrade Kafka Eagle often to stay up to date with the latest fixes and enhancements. In order to make this a reality, Kafka Eagle upgrades are backward compatible and the upgrade process is simple and quick.</p>
+        <p>Upgrading is generally safe (between many minor and one major version) and dashboards and graphs will look the same. There may be minor breaking changes in some edge cases, which are outlined in the <a href="../changelog/changelog.html" style="text-decoration:none;">Changelog</a></p>
+        <h2>1. Download</h2>
+        <p>Go to the <a href="http://download.smartloli.org/" style="text-decoration:none;" target="_blank">download</a> page for the latest download links</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Kafka Eagle</th>
+              <th>Repository</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Download</td>
+              <td>http://download.kafka-eagle.org/</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>2. Extract</h2>
+        <p>Extract the latest version of Kafka Eagle installation package:</p>
+        <pre><code><span class="string">tar -zxvf kafka-eagle-xxx-bin.tar.gz</span></code></pre>
+        <h2>3. Upgrade</h2>
+        <p>Stop old Kafka Eagle server and replace new Kafka Eagle:</p>
+        <pre><code><span class="string">ke.sh stop</span>
+<span class="string">mv kafka-egale kafka-egale.old</span>
+<span class="string">mv kafka-egale-xxx kafka-egale</span>
+<span class="string">cp kafka-egale.old/conf/system-config.properties $KE_HOME/conf</span>
+<span class="string">chmod +x $KE_HOME/bin/*.sh</span>
+<span class="string">ke.sh start</span>
+        </code></pre>
       </div>
     </section>
     <footer class="wrap">

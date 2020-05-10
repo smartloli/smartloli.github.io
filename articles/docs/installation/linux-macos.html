@@ -42,7 +42,8 @@
             <li><a href="linux-macos.html">Install on Linux/macOS</a></li>
             <li><a href="windows.html">Install on Windows</a></li>
             <li><a href="configuration.html">Configuration</a></li>
-            <li><a href="#security">Security</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="upgrade.html">Upgrade Kafka Eagle</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -75,7 +76,7 @@
         <div class="nav-docs section">
           <h5>ChangeLog</h5>
           <ul>
-            <li><a href="">ChangeLog</a></li>
+            <li><a href="../changelog/changelog.html">ChangeLog</a></li>
           </ul>
         </div>
       </div>
@@ -85,7 +86,7 @@
         <h2>Overview</h2>
         <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service up and running on your Linux or macOS system, and the installation package details.</p>
         <blockquote>
-          <strong>Note on upgrading:<br/></strong> While the process for upgrading Kafka Eagle is very similar to installing Kafka Eagle, there are some key backup steps you should perform. Read <a href="" style="text-decoration:none;">Upgrading Kafka Eagle</a>          for tips and guidance on updating an existing installation.
+          <strong>Note on upgrading:<br/></strong> While the process for upgrading Kafka Eagle is very similar to installing Kafka Eagle, there are some key backup steps you should perform. Read <a href="upgrade.html" style="text-decoration:none;">Upgrading Kafka Eagle</a>          for tips and guidance on updating an existing installation.
         </blockquote>
         <h2>1. Download and install</h2>
         <p>You can download the <a href="https://github.com/smartloli/kafka-eagle" style="text-decoration:none;" target="_blank">Kafka Eagle</a> source code on GitHub to compile and install by yourself, or by <a href="http://download.kafka-eagle.org/" style="text-decoration:none;"
@@ -93,8 +94,8 @@
         <table>
           <thead>
             <tr>
-              <td>Kafka Eagle</td>
-              <td>Repository</td>
+              <th>Kafka Eagle</th>
+              <th>Repository</th>
             </tr>
           </thead>
           <tbody>
@@ -131,9 +132,7 @@
         </blockquote>
         <h2>3. Extract Kafka Eagle</h2>
         <p>Here we extract to <code>/data/soft/new</code> directory and extract:</p>
-        <blockquote>
-          tar -zxvf kafka-eagle-xxx-bin.tar.gz
-        </blockquote>
+        <pre><code><span class="string">tar -zxvf kafka-eagle-xxx-bin.tar.gz</span></code></pre>
         If you have installed the version before, delete the modified version, and rename the current version, as shown below:
         <pre><code><span class="string">rm -rf kafka-eagle</span><br/><span class="string">mv kafka-eagle-xxx kafka-eagle</span></code></pre>
         <p>Then, configure Kafka Eagle profile</p>
