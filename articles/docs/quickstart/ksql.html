@@ -105,6 +105,22 @@
         <pre><code>select JSON("msg",'name') from "topic_name" where "partition" in (0) limit 10</code></pre>
         <p>Using <code>and</code> syntax in SQL</p>
         <pre><code>select JSON("msg",'name') from "topic_name" where "partition" in (0) and JSON("msg",'name') = 'smartloli001' limit 10</code></pre>
+        <h2>Filter Query [where ... and]</h2>
+        <p>Kafka topic datasets like this:</p>
+        <pre><code>kafka-eagle-01
+kafka-eagle-02
+kafka-eagle-02
+kafka-eagle-03
+kafka-eagle-03
+...
+kafka-eagle-03
+kafka-eagle-04</code></pre>
+      <p>Then you can use sql query topic like this:</p>
+      <pre><code>select * from "topic_name" where "partition" in (0) and "msg" = 'kafka-eagle-03' limit 10</code></pre>
+      <p>Using <code>like</code> syntax in SQL</p>
+      <pre><code>select * from "topic_name" where "partition" in (0) and "msg" like 'kafka-eagle%' limit 10</code></pre>
+      <p>Or</p>
+      <pre><code>select * from "topic_name" where "partition" in (0) and "msg" like '%kafka-eagle%' limit 10</code></pre>
       </div>
     </section>
     <footer class="wrap">
