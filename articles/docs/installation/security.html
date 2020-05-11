@@ -15,15 +15,19 @@
 <body>
   <div class="container">
     <div class="nav-main">
-      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+      <div class="wrap"><a href="" class="nav-home"><img
+            style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
+            src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
+            class="blur-label">Kafka-</span>Eagle</a>
         <ul class="nav-site nav-site-internal">
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li>
-          <!-- <li><a href="../docs/docs.html" class="active">Docs</a></li> -->
+          <li><a href="../../../index.html">Home</a></li>
+          <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
+          <li><a href="../documentation.html" class="active">Documentation</a></li>
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
-          <li><a href="../article/wechat.html">Articles</a></li>
-          <li><a href="../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
+          <li><a href="../../article/wechat.html">Articles</a></li>
+          <li><a href="../../about/me.html">About</a></li>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -42,7 +46,7 @@
             <li><a href="linux-macos.html">Install on Linux/macOS</a></li>
             <li><a href="windows.html">Install on Windows</a></li>
             <li><a href="configuration.html">Configuration</a></li>
-            <li><a href="security.html">Security</a></li>
+            <li><a href="security.html" class="active">Security</a></li>
             <li><a href="upgrade.html">Upgrade Kafka Eagle</a></li>
           </ul>
         </div>
@@ -50,27 +54,27 @@
           <h5>Quick Start</h5>
           <ul>
             <li><a href="../quickstart/dashboard.html">Dashboard</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#consumers">Consumers</a></li>
-            <li><a href="#cluster">Cluster</a></li>
-            <li><a href="#alarm">Alarm</a></li>
-            <li><a href="#shell">Shell</a></li>
-            <li><a href="#zkcli">ZkCli</a></li>
-            <li><a href="#multi">Multi-Cluster</a></li>
-            <li><a href="#ksql">KSQL</a></li>
-            <li><a href="#system">System</a></li>
-            <li><a href="#metrics">Metrics</a></li>
-            <li><a href="#bscreen">BScreen</a></li>
+            <li><a href="../quickstart/topics.html">Topics</a></li>
+            <li><a href="../quickstart/consumers.html">Consumers</a></li>
+            <li><a href="../quickstart/cluster.html">Cluster</a></li>
+            <li><a href="../quickstart/alarm.html">Alarm</a></li>
+            <li><a href="../quickstart/shell.html">Shell</a></li>
+            <li><a href="../quickstart/zkcli.html">ZkCli</a></li>
+            <li><a href="../quickstart/multi.html">Multi-Cluster</a></li>
+            <li><a href="../quickstart/ksql.html">KSQL</a></li>
+            <li><a href="../quickstart/system.html">System</a></li>
+            <li><a href="../quickstart/metrics.html">Metrics</a></li>
+            <li><a href="../quickstart/bscreen.html">BScreen</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
           <h5>Designed</h5>
           <ul>
-            <li><a href="#dashboard">PartI</a></li>
-            <li><a href="#topics">PartII</a></li>
-            <li><a href="#consumers">PartIII</a></li>
-            <li><a href="#cluster">PartIV</a></li>
-            <li><a href="#alarm">PDF</a></li>
+            <li><a href="../designed/part1.html">PartI</a></li>
+            <li><a href="../designed/part2.html">PartII</a></li>
+            <li><a href="../designed/part3.html">PartIII</a></li>
+            <li><a href="../designed/part4.html">PartIV</a></li>
+            <li><a href="../designed/pdf.html">PDF</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -82,9 +86,11 @@
       </div>
       <div class="inner-content">
         <h1>Security</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Security</div>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> >
+          Security</div>
         <h2>Overview</h2>
-        <p>If your Kafka cluster has set security authentication, you need to set the corresponding security authentication information in Kafka Eagle.</p>
+        <p>If your Kafka cluster has set security authentication, you need to set the corresponding security
+          authentication information in Kafka Eagle.</p>
         <ul>
           <li>SASL/GSSAPI (Kerberos)</li>
           <li>SASL/PLAIN</li>
@@ -108,8 +114,8 @@ cluster1.kafka.eagle.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModu
 # if your kafka cluster doesn't require it, you don't need to set it up
 # cluster1.kafka.eagle.sasl.client.id=</code></pre>
         <h2>PLAIN</h2>
-<p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
-<pre><code>######################################
+        <p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
+        <pre><code>######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -119,8 +125,8 @@ cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.plain.Pla
 # if your kafka cluster doesn't require it, you don't need to set it up
 # cluster1.kafka.eagle.sasl.client.id=</code></pre>
         <h2>SCRAM-SHA-256</h2>
-<p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
-<pre><code>######################################
+        <p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
+        <pre><code>######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -130,8 +136,9 @@ cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.scram.Scr
 # if your kafka cluster doesn't require it, you don't need to set it up
 # cluster1.kafka.eagle.sasl.client.id=</code></pre>
         <h2>OAUTHBEARER</h2>
-<p>If you use this authentication, you need to make sure that your Kafka cluster version is after <code>2.x</code>, Kafka Eagle <code>system-config.properties</code> file setting:</p>
-<pre><code>######################################
+        <p>If you use this authentication, you need to make sure that your Kafka cluster version is after
+          <code>2.x</code>, Kafka Eagle <code>system-config.properties</code> file setting:</p>
+        <pre><code>######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -141,8 +148,9 @@ cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.oauthbear
 # if your kafka cluster doesn't require it, you don't need to set it up
 # cluster1.kafka.eagle.sasl.client.id=</code></pre>
         <h2>SSL</h2>
-<p>If you use this authentication(ssl), you need to make sure that your Kafka cluster version is after <code>2.x</code>, Kafka Eagle <code>system-config.properties</code> file setting:</p>
-<pre><code>######################################
+        <p>If you use this authentication(ssl), you need to make sure that your Kafka cluster version is after
+          <code>2.x</code>, Kafka Eagle <code>system-config.properties</code> file setting:</p>
+        <pre><code>######################################
 # kafka ssl authenticate
 ######################################
 cluster3.kafka.eagle.ssl.enable=true
@@ -158,8 +166,9 @@ cluster3.kafka.eagle.ssl.keystore.password=ke123456
 # kafka server.properties "ssl.key.password" value
 cluster3.kafka.eagle.ssl.key.password=ke123456</code></pre>
         <h2>CGroups</h2>
-<p>When using permission authentication (such as SASL Or SSL), the user you are using only supports managing a limited number of kafka topics. You can enable the following properties:</p>
-<pre><code># SASL
+        <p>When using permission authentication (such as SASL Or SSL), the user you are using only supports managing a
+          limited number of kafka topics. You can enable the following properties:</p>
+        <pre><code># SASL
 cluster1.kafka.eagle.sasl.cgroup.enable=true
 cluster1.kafka.eagle.sasl.cgroup.topics=topic1,topic2,topic3
 
@@ -169,7 +178,8 @@ cluster2.kafka.eagle.ssl.cgroup.topics=topic4,topic5,topic6</code></pre>
       </div>
     </section>
     <footer class="wrap">
-      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.
+      </div>
     </footer>
   </div>
 </body>

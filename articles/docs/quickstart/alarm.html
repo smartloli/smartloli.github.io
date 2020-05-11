@@ -15,15 +15,19 @@
 <body>
   <div class="container">
     <div class="nav-main">
-      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+      <div class="wrap"><a href="" class="nav-home"><img
+            style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
+            src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
+            class="blur-label">Kafka-</span>Eagle</a>
         <ul class="nav-site nav-site-internal">
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li>
-          <!-- <li><a href="../docs/docs.html" class="active">Docs</a></li> -->
+          <li><a href="../../../index.html">Home</a></li>
+          <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
+          <li><a href="../documentation.html" class="active">Documentation</a></li>
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
-          <li><a href="../article/wechat.html">Articles</a></li>
-          <li><a href="../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
+          <li><a href="../../article/wechat.html">Articles</a></li>
+          <li><a href="../../about/me.html">About</a></li>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -38,12 +42,12 @@
         <div class="nav-docs section">
           <h5>Installation</h5>
           <ul>
-            <li><a href="requirements.html">Requirements</a></li>
-            <li><a href="linux-macos.html">Install on Linux/macOS</a></li>
-            <li><a href="windows.html">Install on Windows</a></li>
-            <li><a href="configuration.html">Configuration</a></li>
-            <li><a href="security.html">Security</a></li>
-            <li><a href="upgrade.html">Upgrade Kafka Eagle</a></li>
+            <li><a href="../installation/requirements.html">Requirements</a></li>
+            <li><a href="../installation/linux-macos.html">Install on Linux/macOS</a></li>
+            <li><a href="../installation/windows.html">Install on Windows</a></li>
+            <li><a href="../installation/configuration.html">Configuration</a></li>
+            <li><a href="../installation/security.html">Security</a></li>
+            <li><a href="../installation/upgrade.html">Upgrade Kafka Eagle</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -53,7 +57,7 @@
             <li><a href="topics.html">Topics</a></li>
             <li><a href="consumers.html">Consumers</a></li>
             <li><a href="cluster.html">Cluster</a></li>
-            <li><a href="alarm.html">Alarm</a></li>
+            <li><a href="alarm.html" class="active">Alarm</a></li>
             <li><a href="shell.html">Shell</a></li>
             <li><a href="zkcli.html">ZkCli</a></li>
             <li><a href="multi.html">Multi-Cluster</a></li>
@@ -66,11 +70,11 @@
         <div class="nav-docs section">
           <h5>Designed</h5>
           <ul>
-            <li><a href="#dashboard">PartI</a></li>
-            <li><a href="#topics">PartII</a></li>
-            <li><a href="#consumers">PartIII</a></li>
-            <li><a href="#cluster">PartIV</a></li>
-            <li><a href="#alarm">PDF</a></li>
+            <li><a href="../designed/part1.html">PartI</a></li>
+            <li><a href="../designed/part2.html">PartII</a></li>
+            <li><a href="../designed/part3.html">PartIII</a></li>
+            <li><a href="../designed/part4.html">PartIV</a></li>
+            <li><a href="../designed/pdf.html">PDF</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -82,13 +86,18 @@
       </div>
       <div class="inner-content">
         <h1>Alarm</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Quick Start</a> > Alarm</div>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Quick Start</a> >
+          Alarm</div>
         <h2>Overview</h2>
-        <p>New alarm module, to pay attention to their own Topic alarm settings. No consumer information when Topic, more than the threshold, the alarm. At present, the alarm way through the message to the alarm, set as shown in the following figure:</p>
+        <p>New alarm module, to pay attention to their own Topic alarm settings. No consumer information when Topic,
+          more than the threshold, the alarm. At present, the alarm way through the message to the alarm, set as shown
+          in the following figure:</p>
         <h2>Support IM</h2>
-        <p>In addition to supporting <code>email</code> or <code>webhook</code> alerts, Kafka Eagle also supports im alerts, such as <code>DingDing</code> and <code>WeChat</code>.</p>
+        <p>In addition to supporting <code>email</code> or <code>webhook</code> alerts, Kafka Eagle also supports im
+          alerts, such as <code>DingDing</code> and <code>WeChat</code>.</p>
         <h2>Channel</h2>
-        <p>First of all, it is necessary to configure alarm channels, select different alarm modes, and divide different alarm groups.</p>
+        <p>First of all, it is necessary to configure alarm channels, select different alarm modes, and divide different
+          alarm groups.</p>
         <img alt="mail" style="width:800px;" src="../../../images/docs/channel_mail@2x.png">
         <p>It should be noted that Kafka Eagle alarm mail uri:</p>
         <pre><code><span class="string">http://127.0.0.1:10086/email</span></code></pre>
@@ -111,7 +120,8 @@
       </div>
     </section>
     <footer class="wrap">
-      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.
+      </div>
     </footer>
   </div>
 </body>

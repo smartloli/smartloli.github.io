@@ -15,15 +15,19 @@
 <body>
   <div class="container">
     <div class="nav-main">
-      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+      <div class="wrap"><a href="" class="nav-home"><img
+            style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
+            src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
+            class="blur-label">Kafka-</span>Eagle</a>
         <ul class="nav-site nav-site-internal">
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li>
-          <!-- <li><a href="../docs/docs.html" class="active">Docs</a></li> -->
+          <li><a href="../../../index.html">Home</a></li>
+          <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
+          <li><a href="../documentation.html" class="active">Documentation</a></li>
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
-          <li><a href="../article/wechat.html">Articles</a></li>
-          <li><a href="../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
+          <li><a href="../../article/wechat.html">Articles</a></li>
+          <li><a href="../../about/me.html">About</a></li>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:kafka.eagle@gmail.com">kafka.eagle@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -40,7 +44,7 @@
           <ul>
             <li><a href="requirements.html">Requirements</a></li>
             <li><a href="linux-macos.html">Install on Linux/macOS</a></li>
-            <li><a href="windows.html">Install on Windows</a></li>
+            <li><a href="windows.html" class="active">Install on Windows</a></li>
             <li><a href="configuration.html">Configuration</a></li>
             <li><a href="security.html">Security</a></li>
             <li><a href="upgrade.html">Upgrade Kafka Eagle</a></li>
@@ -50,27 +54,27 @@
           <h5>Quick Start</h5>
           <ul>
             <li><a href="../quickstart/dashboard.html">Dashboard</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#consumers">Consumers</a></li>
-            <li><a href="#cluster">Cluster</a></li>
-            <li><a href="#alarm">Alarm</a></li>
-            <li><a href="#shell">Shell</a></li>
-            <li><a href="#zkcli">ZkCli</a></li>
-            <li><a href="#multi">Multi-Cluster</a></li>
-            <li><a href="#ksql">KSQL</a></li>
-            <li><a href="#system">System</a></li>
-            <li><a href="#metrics">Metrics</a></li>
-            <li><a href="#bscreen">BScreen</a></li>
+            <li><a href="../quickstart/topics.html">Topics</a></li>
+            <li><a href="../quickstart/consumers.html">Consumers</a></li>
+            <li><a href="../quickstart/cluster.html">Cluster</a></li>
+            <li><a href="../quickstart/alarm.html">Alarm</a></li>
+            <li><a href="../quickstart/shell.html">Shell</a></li>
+            <li><a href="../quickstart/zkcli.html">ZkCli</a></li>
+            <li><a href="../quickstart/multi.html">Multi-Cluster</a></li>
+            <li><a href="../quickstart/ksql.html">KSQL</a></li>
+            <li><a href="../quickstart/system.html">System</a></li>
+            <li><a href="../quickstart/metrics.html">Metrics</a></li>
+            <li><a href="../quickstart/bscreen.html">BScreen</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
           <h5>Designed</h5>
           <ul>
-            <li><a href="#dashboard">PartI</a></li>
-            <li><a href="#topics">PartII</a></li>
-            <li><a href="#consumers">PartIII</a></li>
-            <li><a href="#cluster">PartIV</a></li>
-            <li><a href="#alarm">PDF</a></li>
+            <li><a href="../designed/part1.html">PartI</a></li>
+            <li><a href="../designed/part2.html">PartII</a></li>
+            <li><a href="../designed/part3.html">PartIII</a></li>
+            <li><a href="../designed/part4.html">PartIV</a></li>
+            <li><a href="../designed/pdf.html">PDF</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -82,12 +86,16 @@
       </div>
       <div class="inner-content">
         <h1>Install on Windows</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> > Install on Windows</div>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> >
+          Install on Windows</div>
         <h2>Overview</h2>
-        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service up and running on your Windows system, and the installation package details.</p>
+        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service
+          up and running on your Windows system, and the installation package details.</p>
         <h2>1. Install JDK</h2>
-        <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next steps. If there is no JDK, first to the Oracle official website to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-            target="_blank" style="text-decoration:none;">download JDK</a>.</p>
+        <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next
+          steps. If there is no JDK, first to the Oracle official website to <a
+            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank"
+            style="text-decoration:none;">download JDK</a>.</p>
         <h3>JAVA_HOME Configure</h3>
         <p>Run the downloaded *.exe file installation package directly, then configure environment variables:</p>
         <img alt="Startup" style="width:800px;" src="../../../images/docs/jdk.jpg">
@@ -102,7 +110,8 @@
       </div>
     </section>
     <footer class="wrap">
-      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+      <div class="center">Copyright © 2020 all right reserved, powered by <a href="" target="_blank">smartloli</a>.
+      </div>
     </footer>
   </div>
 </body>
