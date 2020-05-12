@@ -94,12 +94,12 @@
         <img alt="mbean" style="width:800px;" src="../../../images/docs/mbean@2x.png">
         <p>If your data is empty, check that the port of JMX is started . If you do not start, you can edit the script
           before you start</p>
-        <pre><code>vi kafka-server-start.sh
+        <div class="highlight"><pre><code class="language-text" data-lang="text">vi kafka-server-start.sh
 ...
 if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
     export KAFKA_HEAP_OPTS="-server -Xms2G -Xmx2G -XX:PermSize=128m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=8 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70"
     export JMX_PORT="9999"
-fi</code></pre>
+fi</code></pre></div>
         <h2>Trend</h2>
         <p>Observe Kafka index data according to different dimensions.</p>
         <img alt="trend" style="width:800px;" src="../../../images/docs/trend@2x.png">

@@ -91,12 +91,14 @@
         <h2>Overview</h2>
         <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service
           up and running on your Linux or macOS system, and the installation package details.</p>
-        <blockquote>
-          <strong>Note on upgrading:<br /></strong> While the process for upgrading Kafka Eagle is very similar to
+        <div class="admonition note">          
+          <p class="first admonition-title">Note on upgrading</p>
+          <p class="last">While the process for upgrading Kafka Eagle is very similar to
           installing Kafka Eagle, there are some key backup steps you should perform. Read <a href="upgrade.html"
             style="text-decoration:none;">Upgrading Kafka Eagle</a> for tips and guidance on updating an existing
           installation.
-        </blockquote>
+          </p>
+        </div>
         <h2>1. Download and install</h2>
         <p>You can download the <a href="https://github.com/smartloli/kafka-eagle" style="text-decoration:none;"
             target="_blank">Kafka Eagle</a> source code on GitHub to compile and install by yourself, or by <a
@@ -120,9 +122,10 @@
             </tr>
           </tbody>
         </table>
-        <blockquote>
-          <strong>Note on install:<br /></strong> We recommend using the official compiled binary installation package.
-        </blockquote>
+        <div class="admonition note">
+          <p class="first admonition-title">Note on install</p>
+          <p class="last">We recommend using the official compiled binary installation package.</p>
+        </div>
         <h2>2. Install JDK</h2>
         <p>If there is a JDK environment on the Linux server, this step can be ignored, and the installation of the next
           steps. If there is no JDK, first to the Oracle official website to <a
@@ -130,34 +133,41 @@
             style="text-decoration:none;">download JDK</a>.</p>
         <h3>JAVA_HOME Configure</h3>
         <p>Extract the binary installation package to the specified directory:</p>
-        <pre><code class="lang-javascript"><span class="string">cd /usr/java</span><br/><span class="string">tar -zxvf jdk-xxxx.tar.gz</span><br/><span class="string">mv jdk-xxxx jdk1.8</span><br/><br/><span class="string">vi /etc/profile</span><br/><br/><span class="string">export JAVA_HOME=/usr/java/jdk1.8<span><br/><span class="string">export PATH=$PATH:$JAVA_HOME/bin</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">cd /usr/java
+tar -zxvf jdk-xxxx.tar.gz
+mv jdk-xxxx jdk1.8
+vi /etc/profile
+export JAVA_HOME=/usr/java/jdk1.8
+export PATH=$PATH:$JAVA_HOME/bin</code></pre></div>
         <p>Then, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.</p>
-        <blockquote>
-          <strong>Note:<br /></strong>
-          If the authority is insufficient, please use the sudo command.
-        </blockquote>
+        <div class="admonition note">
+          <p class="first admonition-title">Note</p>
+          <p class="last">If the authority is insufficient, please use the sudo command.</p>
+        </div>
         <p>Finally, we input <code>java -version</code>, according to the following information:</p>
-        <blockquote>
-          <strong>Note:<br /></strong>
-          java version "1.8.0_60"<br />
+        <div class="admonition note">
+            <p class="first admonition-title">Note</p>
+            <p class="last">java version "1.8.0_60"<br />
           Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br />
-          Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
-        </blockquote>
+          Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)</p>
+        </div>
         <h2>3. Extract Kafka Eagle</h2>
         <p>Here we extract to <code>/data/soft/new</code> directory and extract:</p>
-        <pre><code><span class="string">tar -zxvf kafka-eagle-xxx-bin.tar.gz</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">tar -zxvf kafka-eagle-xxx-bin.tar.gz</code></div>
         If you have installed the version before, delete the modified version, and rename the current version, as shown
         below:
-        <pre><code><span class="string">rm -rf kafka-eagle</span><br/><span class="string">mv kafka-eagle-xxx kafka-eagle</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">rm -rf kafka-eagle
+mv kafka-eagle-xxx kafka-eagle</code></pre></div>        
         <p>Then, configure Kafka Eagle profile</p>
-        <pre><code><span class="string">vi /etc/profile<br/></span><span class="string">export KE_HOME=/data/soft/new/kafka-eagle<br/>export PATH=$PATH:$KE_HOME/bin</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">vi /etc/profile
+export KE_HOME=/data/soft/new/kafka-eagle
+export PATH=$PATH:$KE_HOME/bin</code></pre></div>        
         <p>Finally, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.</p>
         <h2>4. Configure Kafka Eagle system file</h2>
         <p>Configure Kafka Eagle according to the actual situation of its own Kafka cluster, For example, zookeeper
           address, version type of Kafka cluster (zk for low version, kafka for high version), Kafka cluster with
           security authentication enabled etc.</p>
-        <pre><code>
-cd ${KE_HOME}/conf
+        <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/conf
 vi system-config.properties
 
 # Multi zookeeper&kafka cluster list -- The client connection address of the Zookeeper cluster is set here
@@ -218,18 +228,20 @@ kafka.eagle.url=jdbc:sqlite:/hadoop/kafka-eagle/db/ke.db
 kafka.eagle.username=root
 kafka.eagle.password=smartloli
 
-# <Optional> set mysql address
+# (Optional) set mysql address
 #kafka.eagle.driver=com.mysql.jdbc.Driver
 #kafka.eagle.url=jdbc:mysql://127.0.0.1:3306/ke?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
 #kafka.eagle.username=root
-#kafka.eagle.password=smartloli
-        </code></pre>
+#kafka.eagle.password=smartloli</code></pre></div>
         <h2>5. Start the Kafka Eagle server</h2>
         <p>In the <code>$KE_HOME/bin</code> directory, there is a <code>ke.sh</code> script file. Execute the start
           command as follows:</p>
-        <pre><code><span class="string">cd ${KE_HOME}/bin</span><br/><span class="string">chmod +x ke.sh</span><br/><span class="string">./ke.sh start</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
+chmod +x ke.sh 
+./ke.sh start</code></pre></div>
         <p>After that, when the Kafka Eagle server is restarted or stopped, execute the following command:</p>
-        <pre><code><span class="string">ke.sh restart</span><br/><span class="string">ke.sh stop</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh restart
+ke.sh stop</code></pre></div>
         <p>As shown in the following figure:</p>
         <img alt="Startup" style="width:800px;" src="../../../images/docs/startup@2x.png">
       </div>

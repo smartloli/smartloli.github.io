@@ -114,16 +114,15 @@
         </table>
         <h2>2. Extract</h2>
         <p>Extract the latest version of Kafka Eagle installation package:</p>
-        <pre><code><span class="string">tar -zxvf kafka-eagle-xxx-bin.tar.gz</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">tar -zxvf kafka-eagle-xxx-bin.tar.gz</code></pre></div>
         <h2>3. Upgrade</h2>
         <p>Stop old Kafka Eagle server and replace new Kafka Eagle:</p>
-        <pre><code><span class="string">ke.sh stop</span>
-<span class="string">mv kafka-egale kafka-egale.old</span>
-<span class="string">mv kafka-egale-xxx kafka-egale</span>
-<span class="string">cp kafka-egale.old/conf/system-config.properties $KE_HOME/conf</span>
-<span class="string">chmod +x $KE_HOME/bin/*.sh</span>
-<span class="string">ke.sh start</span>
-        </code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh stop
+mv kafka-egale kafka-egale.old
+mv kafka-egale-xxx kafka-egale
+cp kafka-egale.old/conf/system-config.properties $KE_HOME/conf
+chmod +x $KE_HOME/bin/*.sh
+ke.sh start</code></pre></div>
       </div>
     </section>
     <footer class="wrap">

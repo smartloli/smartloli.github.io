@@ -101,7 +101,7 @@
         </ul>
         <h2>Kerberos</h2>
         <p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
-        <pre><code>######################################
+        <div class="highlight"><pre><code class="language-text" data-lang="text">######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -112,10 +112,10 @@ cluster1.kafka.eagle.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModu
 # cluster1.kafka.eagle.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true renewTicket=true serviceName="kafka-eagle.org";
 
 # if your kafka cluster doesn't require it, you don't need to set it up
-# cluster1.kafka.eagle.sasl.client.id=</code></pre>
+# cluster1.kafka.eagle.sasl.client.id=</code></pre></div>
         <h2>PLAIN</h2>
         <p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
-        <pre><code>######################################
+        <div class="highlight"><pre><code class="language-text" data-lang="text">######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -123,10 +123,10 @@ cluster1.kafka.eagle.sasl.protocol=SASL_PLAINTEXT
 cluster1.kafka.eagle.sasl.mechanism=PLAIN
 cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="kafka" password="kafka-eagle";
 # if your kafka cluster doesn't require it, you don't need to set it up
-# cluster1.kafka.eagle.sasl.client.id=</code></pre>
+# cluster1.kafka.eagle.sasl.client.id=</code></pre></div>
         <h2>SCRAM-SHA-256</h2>
         <p>Kafka Eagle <code>system-config.properties</code> file setting:</p>
-        <pre><code>######################################
+        <div class="highlight"><pre><code class="language-text" data-lang="text">######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -134,11 +134,11 @@ cluster1.kafka.eagle.sasl.protocol=SASL_PLAINTEXT
 cluster1.kafka.eagle.sasl.mechanism=SCRAM-SHA-256
 cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="kafka" password="kafka-eagle";
 # if your kafka cluster doesn't require it, you don't need to set it up
-# cluster1.kafka.eagle.sasl.client.id=</code></pre>
+# cluster1.kafka.eagle.sasl.client.id=</code></pre></div>
         <h2>OAUTHBEARER</h2>
         <p>If you use this authentication, you need to make sure that your Kafka cluster version is after
           <code>2.x</code>, Kafka Eagle <code>system-config.properties</code> file setting:</p>
-        <pre><code>######################################
+        <div class="highlight"><pre><code class="language-text" data-lang="text">######################################
 # kafka  sasl authenticate
 ######################################
 cluster1.kafka.eagle.sasl.enable=true
@@ -146,11 +146,11 @@ cluster1.kafka.eagle.sasl.protocol=SASL_PLAINTEXT
 cluster1.kafka.eagle.sasl.mechanism=OAUTHBEARER
 cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required unsecuredLoginStringClaim_sub="kafka-eagle";
 # if your kafka cluster doesn't require it, you don't need to set it up
-# cluster1.kafka.eagle.sasl.client.id=</code></pre>
+# cluster1.kafka.eagle.sasl.client.id=</code></pre></div>
         <h2>SSL</h2>
         <p>If you use this authentication(ssl), you need to make sure that your Kafka cluster version is after
           <code>2.x</code>, Kafka Eagle <code>system-config.properties</code> file setting:</p>
-        <pre><code>######################################
+         <div class="highlight"><pre><code class="language-text" data-lang="text">######################################
 # kafka ssl authenticate
 ######################################
 cluster3.kafka.eagle.ssl.enable=true
@@ -164,17 +164,17 @@ cluster3.kafka.eagle.ssl.keystore.location=/data/kafka/ssl/certificates/kafka.ke
 # kafka server.properties "ssl.keystore.password" value
 cluster3.kafka.eagle.ssl.keystore.password=ke123456
 # kafka server.properties "ssl.key.password" value
-cluster3.kafka.eagle.ssl.key.password=ke123456</code></pre>
+cluster3.kafka.eagle.ssl.key.password=ke123456</code></pre></div>
         <h2>CGroups</h2>
         <p>When using permission authentication (such as SASL Or SSL), the user you are using only supports managing a
           limited number of kafka topics. You can enable the following properties:</p>
-        <pre><code># SASL
+        <div class="highlight"><pre><code class="language-text" data-lang="text"># SASL
 cluster1.kafka.eagle.sasl.cgroup.enable=true
 cluster1.kafka.eagle.sasl.cgroup.topics=topic1,topic2,topic3
 
 # SSL
 cluster2.kafka.eagle.ssl.cgroup.enable=true
-cluster2.kafka.eagle.ssl.cgroup.topics=topic4,topic5,topic6</code></pre>
+cluster2.kafka.eagle.ssl.cgroup.topics=topic4,topic5,topic6</code></pre></div>
       </div>
     </section>
     <footer class="wrap">

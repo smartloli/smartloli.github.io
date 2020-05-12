@@ -100,19 +100,19 @@
           alarm groups.</p>
         <img alt="mail" style="width:800px;" src="../../../images/docs/channel_mail@2x.png">
         <p>It should be noted that Kafka Eagle alarm mail uri:</p>
-        <pre><code><span class="string">http://127.0.0.1:10086/email</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">http://127.0.0.1:10086/email</code></pre></div>
         <p>Email or Webhook restful api server uri:</p>
-        <pre><code><span class="string">http://127.0.0.1:10086/email?address="xxx@gmail.com"&msg="alarm msg"</span></code></pre>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">http://127.0.0.1:10086/email?address="xxx@gmail.com"&msg="alarm msg"</code></pre></div>
         <p>Api server uri java code:</p>
-        <pre><code>@RestController
-<span class="string">public class</span> MailController {
+        <div class="highlight"><pre><code class="language-text" data-lang="text">@RestController
+public class</span> MailController {
     @RequestMapping(value="/email", method = RequestMethod.POST)
-    <span class="string">public String</span> sendPostMail(HttpServletRequest request) {
+    public String sendPostMail(HttpServletRequest request) {
         // Send Alarm Message Interface
         System.out.println("[PUT] address: " + request.getParameter("address") + ",msg: " + request.getParameter("msg"));
         return "OK";
     }
-}</code></pre>
+}</code></pre></div>
         <h2>DingDing</h2>
         <img alt="dingding" style="width:800px;" src="../../../images/docs/dingding_alert@2x.png">
         <h2>WeChat</h2>
