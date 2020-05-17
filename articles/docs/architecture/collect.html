@@ -116,9 +116,11 @@ telnet zk01 2181</code></pre></div>
           <p class="last">When rendering the graphics, if the page display is abnormal, the static resources are not loaded successfully. The reason may be that the server has nginx installed, which limits the size of static resources (such as CSS, JavaScript, etc.). Users can modify the limit size of nginx on the server.</p>
         </div>
         <p>You can check if static resources are limited:</p>
-        <p><strong>Step 1: Open the browser review element, switch to the network module, and check <code>Disable cache</code>.</strong></p>
+        <h4>Step1</h4>
+        <p>Open the browser review element, switch to the network module, and check <code>Disable cache</code>.</p>
         <img alt="part1" style="width:800px;" src="../../../images/docs/chrome_network@2x.png">
-        <p><strong>Step 2: Switch to the console module, refresh the browser, and observe whether the console module is abnormal. If there is an exception, you can use the search engine to solve it according to the exception prompt.</strong></p>
+        <h4>Step2</h4>
+        <p>Switch to the console module, refresh the browser, and observe whether the console module is abnormal. If there is an exception, you can use the search engine to solve it according to the exception prompt.</p>
         <img alt="part1" style="width:800px;" src="../../../images/docs/chrome_console@2x.png">
         <h2>Applications Monitor</h2>
         <p>Indicators such as consumer groups, consumers, producers, and topics reflect the health of client programs. We can analyze whether our application is normal by observing these indicators on the Kafka Eagle web page.</p>
