@@ -79,7 +79,7 @@
             <li><a href="intro.html" class="active">Introduction</a></li>
             <li><a href="collect.html">Data Collection</a></li>
             <li><a href="core.html">Core Modules</a></li>
-            <li><a href="performance.html">Performance</a></li>
+            <li><a href="advanced.html">Advanced</a></li>
             <li><a href="pdf.html">PDF</a></li>
           </ul>
         </div>
@@ -94,7 +94,18 @@
         <h1>Core Modules</h1>
         <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> > Core Modules</div>
         <h2>Overview</h2>
-        <p>TODO</p>
+        <p>The monitor system is the most important link of the operation process even the lifecycle of a product. It sends alarms before accidents and provides detailed data for the investigation of issues. There are many choices of open source kafka monitor system as a muture product in operation industry.</p>
+        <p>So, we can look up <a href="../../../index.html" style="text-decoration:none;">Kafka Eagle</a> feature and architecture.</p>
+        <h2>Feature</h2>
+        <p>Kafka Eagle consists of dashboard, collect, storage, alarm, authority authentication and other core feature modules. Each feature module is responsible for the following:</p>
+        <ul>
+          <li><strong>Dashboard:</strong> Responsible for visualizing the performance indicators of Kafka cluster , analyzing the runtime of consumer and producer applications.</li>
+          <li><strong>Collect:</strong> Responsible for collecting performance indicators of all Kafka and service indicators of consumers and producers through timers.</li>
+          <li><strong>Storage:</strong> Responsible for storing all collected data, user metadata, user alarm data. Currently supports MySQL and SQLite.</li>
+          <li><strong>Alarm:</strong> Responsible for alarm exception indicators, such as broker shutdown, consumer blocking, producer write exception, etc. Currently supports Mail, DingDing, and WeChat.</li>
+          <li><strong>Authentication:</strong> Responsible for authority authentication and distinguish the use authority of different users. For example, the administrator can use all feature.</li>
+        </ul>
+        <img alt="part2" style="width:800px;" src="../../../images/docs/partii@2x.png">
       </div>
     </section>
     <footer class="wrap">
