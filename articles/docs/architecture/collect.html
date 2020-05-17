@@ -76,8 +76,8 @@
         <div class="nav-docs section">
           <h5>Architecture</h5>
           <ul>
-            <li><a href="intro.html" class="active">Introduction</a></li>
-            <li><a href="collect.html">Data Collection</a></li>
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="collect.html" class="active">Data Collection</a></li>
             <li><a href="core.html">Core Modules</a></li>
             <li><a href="performance.html">Performance</a></li>
             <li><a href="pdf.html">PDF</a></li>
@@ -104,11 +104,44 @@
         <p>That's quite a lot, which come from different interfaces, such as JMX, Kafka API, internal topic etc.</p>
         <p>Let's focus on the three representative categories above.</p>
         <h2>Kafka Machine Loading Information</h2>
-        <p>TODO</p>
+        <p>The collection of this category is universal. We can collect data through Kafka broker JMX, Kafka API etc.</p>
+        <p>It should be noted here that if data acquisition fails, it is necessary to insist on whether the network is limited, such as firewall policy.</p>
+        <p>We can test whether the corresponding port is available on the server where Kafka Eagle is deployed. The command is as follows:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text"></code># Test Kafka Broker Server
+telnet kafka01 9092
+# Test Kafka Broker JMX
+telnet kafka01 9999
+# Test Zookeeper Server
+telnet zk01 2181</code></pre></div>
+        <p>For the introduction of JMX, please visit <a href="../quickstart/metrics.html" style="text-decoration:none;">here</a>.</p>
+        <div class="admonition note">
+          <p class="first admonition-title">Note</p>
+          <p class="last">For Kafka Broker JMX port, it can be set to any available port on the server, and Kafka Eagle will automatically identify.</p>
+        </div>
         <h2>Service Monitor Data</h2>
-        <p>TODO</p>
+        <p>Service indicators such as QPS, TPS and RT reflect the performance of Kafka Broker services. These indicators are collected by different timers. After has finished collection, the collected data (from JMX or API) is stored in the database (such as MySQL or SQLite). Finally, the data is rendered in the dashboard to form a friendly graph web page.</p>
+        <div class="admonition note">
+          <p class="first admonition-title">Note</p>
+          <p class="last">When rendering the graphics, if the page display is abnormal, the static resources are not loaded successfully. The reason may be that the server has nginx installed, which limits the size of static resources (such as CSS, JavaScript, etc.). Users can modify the limit size of nginx on the server.</p>
+        </div>
+        <p>You can check if static resources are limited:</p>
+        <p><strong>Step 1: Open the browser review element, switch to the network module, and check <code>Disable cache</code>.</strong></p>
+        <img alt="part1" style="width:800px;" src="../../../images/docs/chrome_network@2x.png">
+        <p><strong>Step 2: Switch to the console module, refresh the browser, and observe whether the console module is abnormal. If there is an exception, you can use the search engine to solve it according to the exception prompt.</strong></p>
+        <img alt="part1" style="width:800px;" src="../../../images/docs/chrome_console@2x.png">
         <h2>Applications Monitor</h2>
-        <p>TODO</p>
+        <p>Indicators such as consumer groups, consumers, producers, and topics reflect the health of client programs. We can analyze whether our application is normal by observing these indicators on the Kafka Eagle web page.</p>
+        <p>We don't need to make any settings for these indicator data. After the client program starts, Kafka Eagle will automatically identify, collect and store the data.</p>
+        <div class="admonition note">
+          <p class="first admonition-title">Note</p>
+          <p class="last">If the Kafka Eagle log throws an exception when collecting data, check whether the configuration file setting of Kafka Eagle is correct.</p>
+        </div>
+        <p>If your Kafka version is less than 0.10.x (0.8.x, or 0.9.x etc.), set as follows:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text"></code># Set Kafka Offsets Storage
+cluster1.kafka.eagle.offset.storage=zk</code></pre></div>
+        <p>If your Kafka version is greater than 0.10.x (1.x, or 2.x etc.), set as follows:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text"></code># Set Kafka Offsets Storage
+cluster1.kafka.eagle.offset.storage=kafka</code></pre></div>
       </div>
     </section>
     <footer class="wrap">
