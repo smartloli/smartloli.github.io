@@ -64,22 +64,12 @@
           </ul>
         </div>
         <div class="nav-docs section">
-          <h5>Designed</h5>
-          <ul>
-            <li><a href="part1.html" class="active">PartI</a></li>
-            <li><a href="part2.html">PartII</a></li>
-            <li><a href="part3.html">PartIII</a></li>
-            <li><a href="part4.html">PartIV</a></li>
-            <li><a href="pdf.html">PDF</a></li>
-          </ul>
-        </div>
-        <div class="nav-docs section">
           <h5>Architecture</h5>
           <ul>
-            <li><a href="arch-intro.html" class="active">Introduction</a></li>
+            <li><a href="arch-intro.html">Introduction</a></li>
             <li><a href="collect.html">Data Collection</a></li>
             <li><a href="core.html">Core Modules</a></li>
-            <li><a href="advanced.html">Advanced</a></li>
+            <li><a href="advanced.html" class="active">Advanced</a></li>
             <li><a href="pdf.html">PDF</a></li>
           </ul>
         </div>
@@ -96,7 +86,21 @@
         <h2>Overview</h2>
         <p>Kafka Eagle has very low requirements for server hardware. Only 1 core of CPU and 2GB of memory can run, and it supports the whole platform (Linux, macOS, Windows). At the same time, Kafka eagle can manage multiple Kafka clusters (without installing a Kafka Eagle service for each Kafka cluster).</p>
         <h2>Advanced</h2>
-        
+        <h3>KSQL</h3>
+        <p>Users can easily use <a href="../quickstart/ksql.html" style="text-decoration:none;">KSQL</a>, can quickly query the data in topic.</p>
+        <h3>Consumers</h3>
+        <p>Through the <a href="../quickstart/consumers.html" style="text-decoration:none;">Consumers</a> module. Users can view the runtime of consumer programs intuitively, and analyze and judge the health of applications with more graphs.</p>
+        <h3>Bash</h3>
+        <p>Manage and view Kafka Eagle process service status through <code>ke.sh</code> script <a href="../quickstart/shell.html" style="text-decoration:none;">command</a>.</p>
+        <h4>JDK Encoding</h4>
+        <p>When you deploy Kafka Eagle on the server where it is installed, the encode of the installed JDK is not UTF-8. When you use the mock feature of Kafka eagle, you will get an exception when sending data in Unicode encoding format.</p>
+        <p>Then, You can run the following command:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text"></code>ke.sh jdk</code></pre></div>
+        <img alt="ke_jdk" style="width:800px;" src="../../../images/docs/ke_jdk@2x.png">
+        <h4>GC</h4>
+        <p>You can also view the process of Kafka Eagle by executing <code>gc</code> command:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text"></code>ke.sh gc</code></pre></div>
+        <img alt="ke_jdk" style="width:800px;" src="../../../images/docs/ke_gc@2x.png">
       </div>
     </section>
     <footer class="wrap">
