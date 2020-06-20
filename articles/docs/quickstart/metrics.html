@@ -111,6 +111,66 @@ fi</code></pre></div>
         <h2>Trend</h2>
         <p>Observe Kafka index data according to different dimensions.</p>
         <img alt="trend" style="width:800px;" src="../../../images/docs/trend@2x.png">
+        <h2>Brokers Metrics</h2>
+        <p>Kafka Eagle monitoring summarizes the node data of the whole cluster. Through the monitoring chart, you can observe the running state of the cluster.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Quota</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MessagesInPerSec</td>
+              <td>Broker aggregate incoming message rate.</td>
+            </tr>
+            <tr>
+              <td>BytesInPerSec</td>
+              <td>Broker aggregate incoming byte rate.</td>
+            </tr>
+            <tr>
+              <td>BytesOutPerSec</td>
+              <td>Broker aggregate outgoing byte rate.</td>
+            </tr>
+            <tr>
+              <td>BytesRejectedPerSec</td>
+              <td>Broker aggregate rejected byte rate.</td>
+            </tr>
+            <tr>
+              <td>FailedFetchRequestsPerSec</td>
+              <td>Broker fetch request rate for requests that failed.</td>
+            </tr>
+            <tr>
+              <td>FailedProduceRequestsPerSec</td>
+              <td>Produce request rate for requests that failed.</td>
+            </tr>
+            <tr>
+              <td>ProduceMessageConversionsPerSec</td>
+              <td>The number of produce message conversions per second for the broker.</td>
+            </tr>
+            <tr>
+              <td>ReplicationBytesInPerSec</td>
+              <td>Byte in rate from other brokers.</td>
+            </tr>
+            <tr>
+              <td>ReplicationBytesOutPerSec</td>
+              <td>Byte out rate to other brokers.</td>
+            </tr>
+            <tr>
+              <td>TotalFetchRequestsPerSec</td>
+              <td>Fetch request rate.</td>
+            </tr>
+            <tr>
+              <td>TotalProduceRequestsPerSec</td>
+              <td>Produce request rate.</td>
+            </tr>
+            <tr>
+              <td>FreePhysicalMemorySize</td>
+              <td>Broker free memory size.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <footer class="wrap">
