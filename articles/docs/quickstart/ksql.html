@@ -99,7 +99,7 @@
         <h2>Overview</h2>
         <p>Use the SQL statement to the news data visualization in topic, for SQL queries, and table names field need to
           use double quotes to mark, example SQL is as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from "ke_test_topic" where "partition" in (0,1,2) limit 100</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from ke_test_topic where `partition` in (0,1,2) limit 100</code></pre></div>
         <p>As shown in the following figure:</p>
         <img alt="kafka_edit" style="width:800px;" src="../../../images/docs/kafka_sql@2x.png">
         <h2>DataSets</h2>
@@ -113,13 +113,13 @@
         <p>Kafka topic datasets like this:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">[{"id":123,"name":"smartloli"},{"id":456,"name":"smartloli2"},{"id":789,"name":"smartloli3"}]</code></pre></div>
         <p>Then you can use sql query topic like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSONS("msg",'name') from "topic_name" where "partition" in (0) limit 10</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSONS(msg,'name') from topic_name where `partition` in (0) limit 10</code></pre></div>
         <p>When Kafka topic datasets like this:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">{"id":123,"name":"smartloli001"}</code></pre></div>
         <p>Then you can use sql query topic like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSON("msg",'name') from "topic_name" where "partition" in (0) limit 10</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSON(msg,'name') from topic_name where `partition` in (0) limit 10</code></pre></div>
         <p>Using <code>and</code> syntax in SQL</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSON("msg",'name') from "topic_name" where "partition" in (0) and JSON("msg",'name') = 'smartloli001' limit 10</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSON(msg,'name') from topic_name where `partition` in (0) and JSON(msg,'name') = 'smartloli001' limit 10</code></pre></div>
         <h2>Filter Query [where ... and]</h2>
         <p>Kafka topic datasets like this:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">kafka-eagle-01
@@ -131,11 +131,11 @@ kafka-eagle-03
 kafka-eagle-03
 kafka-eagle-04</code></pre></div>
         <p>Then you can use sql query topic like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from "topic_name" where "partition" in (0) and "msg" = 'kafka-eagle-03' limit 10</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg = 'kafka-eagle-03' limit 10</code></pre></div>
         <p>Using <code>like</code> syntax in SQL</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from "topic_name" where "partition" in (0) and "msg" like 'kafka-eagle%' limit 10</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg like 'kafka-eagle%' limit 10</code></pre></div>
         <p>Or</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from "topic_name" where "partition" in (0) and "msg" like '%kafka-eagle%' limit 10</code></pre></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg like '%kafka-eagle%' limit 10</code></pre></div>
       </div>
     </section>
     <footer class="wrap">
