@@ -103,7 +103,7 @@
         <h2>Support IM</h2>
         <p>In addition to supporting <code>email</code> or <code>webhook</code> alerts, Kafka Eagle also supports im
           alerts, such as <code>DingDing</code> and <code>WeChat</code>.</p>
-        <h2>Channel</h2>
+        <h2>Mail Or WebHook</h2>
         <p>First of all, it is necessary to configure alarm channels, select different alarm modes, and divide different
           alarm groups.</p>
         <img alt="mail" style="width:800px;" src="../../../images/docs/channel_mail@2x.png">
@@ -121,6 +121,10 @@ public class</span> MailController {
         return "OK";
     }
 }</code></pre></div>
+        <h2>Mail By ServerAddress</h2>
+        <p>If you have the username and password of the mail server, you can use the following method to set the information about your mail server into the following JsonObject</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">{"host":"smtp.126.com","port":"465","sa":"ke","username":"ke@126.com","password":"*********","enable_ssl":true}</code></pre></div>
+        <img alt="dingding" style="width:800px;" src="../../../images/docs/mail_json@2x.png">
         <h2>DingDing</h2>
         <img alt="dingding" style="width:800px;" src="../../../images/docs/dingding_alert@2x.png">
         <h2>WeChat</h2>
