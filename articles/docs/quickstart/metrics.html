@@ -108,6 +108,12 @@ if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
     export KAFKA_HEAP_OPTS="-server -Xms2G -Xmx2G -XX:PermSize=128m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=8 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70"
     export JMX_PORT="9999"
 fi</code></pre></div>
+        <h2>Zookeeper</h2>
+        <p>When your zookeeper version is after 3.5, you need to open zkcli permission to repair the script content</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">vi zkServer.sh
+...
+// after 77 lines
+ZOOMAIN="-Dzookeeper.4lw.commands.whitelist=* ${ZOOMAIN}"</code></pre></div>
         <h2>Trend</h2>
         <p>Observe Kafka index data according to different dimensions.</p>
         <img alt="trend" style="width:800px;" src="../../../images/docs/trend@2x.png">
