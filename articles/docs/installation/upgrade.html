@@ -27,7 +27,7 @@
       <div class="wrap"><a href="" class="nav-home"><img
             style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
             src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
-            class="blur-label">Kafka-</span>Eagle</a>
+            class="blur-label">EFAK</span></a>
         <ul class="nav-site nav-site-internal">
           <li><a href="../../../index.html">Home</a></li>
           <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
@@ -43,7 +43,7 @@
         <div class="nav-docs section">
           <h5>Introduce</h5>
           <ul>
-            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is EFAK</a></li>
             <li><a href="../introduce/getting-started.html">Getting Started</a></li>
           </ul>
         </div>
@@ -55,7 +55,7 @@
             <li><a href="windows.html">Install on Windows</a></li>
             <li><a href="configuration.html">Configuration</a></li>
             <li><a href="security.html">Security</a></li>
-            <li><a href="upgrade.html" class="active">Upgrade Kafka Eagle</a></li>
+            <li><a href="upgrade.html" class="active">Upgrade EFAK</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -93,12 +93,12 @@
         </div>
       </div>
       <div class="inner-content">
-        <h1>Upgrade Kafka Eagle</h1>
+        <h1>Upgrade EFAK</h1>
         <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> >
-          Upgrade Kafka Eagle</div>
+          Upgrade EFAK</div>
         <h2>Overview</h2>
-        <p>We recommend that you upgrade Kafka Eagle often to stay up to date with the latest fixes and enhancements. In
-          order to make this a reality, Kafka Eagle upgrades are backward compatible and the upgrade process is simple
+        <p>We recommend that you upgrade EFAK often to stay up to date with the latest fixes and enhancements. In
+          order to make this a reality, EFAK upgrades are backward compatible and the upgrade process is simple
           and quick.</p>
         <p>Upgrading is generally safe (between many minor and one major version) and dashboards and graphs will look
           the same. There may be minor breaking changes in some edge cases, which are outlined in the <a
@@ -109,7 +109,7 @@
         <table>
           <thead>
             <tr>
-              <th>Kafka Eagle</th>
+              <th>EFAK</th>
               <th>Repository</th>
             </tr>
           </thead>
@@ -121,14 +121,14 @@
           </tbody>
         </table>
         <h2>2. Extract</h2>
-        <p>Extract the latest version of Kafka Eagle installation package:</p>
+        <p>Extract the latest version of EFAK installation package:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">tar -zxvf kafka-eagle-xxx-bin.tar.gz</code></pre></div>
         <h2>3. Upgrade</h2>
-        <p>Stop old Kafka Eagle server and replace new Kafka Eagle:</p>
+        <p>Stop old EFAK server and replace new EFAK:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh stop
-mv kafka-egale kafka-egale.old
-mv kafka-egale-xxx kafka-egale
-cp kafka-egale.old/conf/system-config.properties $KE_HOME/conf
+mv efak efak.old
+mv efak-xxx efak
+cp efak.old/conf/system-config.properties $KE_HOME/conf
 chmod +x $KE_HOME/bin/*.sh
 ke.sh start</code></pre></div>
         <h2>4. Upgrade V1.4.8</h2>

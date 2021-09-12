@@ -27,7 +27,7 @@
       <div class="wrap"><a href="" class="nav-home"><img
             style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
             src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
-            class="blur-label">Kafka-</span>Eagle</a>
+            class="blur-label">EFAK</span></a>
         <ul class="nav-site nav-site-internal">
           <li><a href="../../../index.html">Home</a></li>
           <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
@@ -43,7 +43,7 @@
         <div class="nav-docs section">
           <h5>Introduce</h5>
           <ul>
-            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is EFAK</a></li>
             <li><a href="../introduce/getting-started.html">Getting Started</a></li>
           </ul>
         </div>
@@ -55,7 +55,7 @@
             <li><a href="windows.html">Install on Windows</a></li>
             <li><a href="configuration.html">Configuration</a></li>
             <li><a href="security.html">Security</a></li>
-            <li><a href="upgrade.html">Upgrade Kafka Eagle</a></li>
+            <li><a href="upgrade.html">Upgrade EFAK</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -97,32 +97,32 @@
         <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Installation</a> >
           Install on Linux/macOS</div>
         <h2>Overview</h2>
-        <p>This page explains how to install Kafka Eagle dependencies, download and install Kafka Eagle, get the service
+        <p>This page explains how to install EFAK dependencies, download and install EFAK, get the service
           up and running on your Linux or macOS system, and the installation package details.</p>
         <div class="admonition note">          
           <p class="first admonition-title">Note on upgrading</p>
-          <p class="last">While the process for upgrading Kafka Eagle is very similar to
-          installing Kafka Eagle, there are some key backup steps you should perform. Read <a href="upgrade.html"
-            style="text-decoration:none;">Upgrading Kafka Eagle</a> for tips and guidance on updating an existing
+          <p class="last">While the process for upgrading EFAK is very similar to
+          installing EFAK, there are some key backup steps you should perform. Read <a href="upgrade.html"
+            style="text-decoration:none;">Upgrading EFAK</a> for tips and guidance on updating an existing
           installation.
           </p>
         </div>
         <h2>1. Download and install</h2>
-        <p>You can download the <a href="https://github.com/smartloli/kafka-eagle" style="text-decoration:none;"
-            target="_blank">Kafka Eagle</a> source code on GitHub to compile and install by yourself, or by <a
+        <p>You can download the <a href="https://github.com/smartloli/EFAK" style="text-decoration:none;"
+            target="_blank">EFAK</a> source code on GitHub to compile and install by yourself, or by <a
             href="http://download.kafka-eagle.org/" style="text-decoration:none;" target="_blank">downloading</a> a
           binary .tar.gz file.</p>
         <table>
           <thead>
             <tr>
-              <th>Kafka Eagle</th>
+              <th>EFAK</th>
               <th>Repository</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Github</td>
-              <td>https://github.com/smartloli/kafka-eagle</td>
+              <td>https://github.com/smartloli/EFAK</td>
             </tr>
             <tr>
               <td>Download</td>
@@ -159,27 +159,27 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre></div>
           Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br />
           Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)</p>
         </div>
-        <h2>3. Extract Kafka Eagle</h2>
+        <h2>3. Extract EFAK</h2>
         <p>Here we extract to <code>/data/soft/new</code> directory and extract:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">tar -zxvf kafka-eagle-xxx-bin.tar.gz</code></div>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">tar -zxvf efak-xxx-bin.tar.gz</code></div>
         If you have installed the version before, delete the modified version, and rename the current version, as shown
         below:
-        <div class="highlight"><pre><code class="language-text" data-lang="text">rm -rf kafka-eagle
-mv kafka-eagle-xxx kafka-eagle</code></pre></div>        
-        <p>Then, configure Kafka Eagle profile</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">rm -rf efak
+mv efak-xxx efak</code></pre></div>        
+        <p>Then, configure EFAK profile</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">vi /etc/profile
-export KE_HOME=/data/soft/new/kafka-eagle
+export KE_HOME=/data/soft/new/efak
 export PATH=$PATH:$KE_HOME/bin</code></pre></div>        
         <p>Finally, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.</p>
-        <h2>4. Configure Kafka Eagle system file</h2>
-        <p>Configure Kafka Eagle according to the actual situation of its own Kafka cluster, For example, zookeeper
+        <h2>4. Configure EFAK system file</h2>
+        <p>Configure EFAK according to the actual situation of its own Kafka cluster, For example, zookeeper
           address, version type of Kafka cluster (zk for low version, kafka for high version), Kafka cluster with
           security authentication enabled etc.</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/conf
 vi system-config.properties
 
 # Multi zookeeper&kafka cluster list -- The client connection address of the Zookeeper cluster is set here
-kafka.eagle.zk.cluster.alias=cluster1,cluster2
+efak.zk.cluster.alias=cluster1,cluster2
 cluster1.zk.list=tdn1:2181,tdn2:2181,tdn3:2181
 cluster2.zk.list=xdn1:2181,xdn2:2181,xdn3:2181
 
@@ -190,70 +190,70 @@ cluster1.zk.acl.username=test
 cluster1.zk.acl.password=test123
 
 # Kafka broker nodes online list
-cluster1.kafka.eagle.broker.size=10
-cluster2.kafka.eagle.broker.size=20
+cluster1.efak.broker.size=10
+cluster2.efak.broker.size=20
 
 # Zkcli limit -- Zookeeper cluster allows the number of clients to connect to
 kafka.zk.limit.size=25
 
-# Kafka Eagle webui port -- WebConsole port access address
-kafka.eagle.webui.port=8048
+# EFAK webui port -- WebConsole port access address
+efak.webui.port=8048
 
 # Kafka offset storage -- Offset stored in a Kafka cluster, if stored in the zookeeper, you can not use this option
-cluster1.kafka.eagle.offset.storage=kafka
-cluster2.kafka.eagle.offset.storage=kafka
+cluster1.efak.offset.storage=kafka
+cluster2.efak.offset.storage=kafka
 
 # Whether the Kafka performance monitoring diagram is enabled
-kafka.eagle.metrics.charts=false
+efak.metrics.charts=false
 
-# Kafka Eagle keeps data for 30 days by default
-kafka.eagle.metrics.retain=30
+# EFAK keeps data for 30 days by default
+efak.metrics.retain=30
 
 # If offset is out of range occurs, enable this property -- Only suitable for kafka sql
-kafka.eagle.sql.fix.error=false
-kafka.eagle.sql.topic.records.max=5000
+efak.sql.fix.error=false
+efak.sql.topic.records.max=5000
 
 # Delete kafka topic token -- Set to delete the topic token, so that administrators can have the right to delete
-kafka.eagle.topic.token=keadmin
+efak.topic.token=keadmin
 
 # Kafka sasl authenticate
-cluster1.kafka.eagle.sasl.enable=false
-cluster1.kafka.eagle.sasl.protocol=SASL_PLAINTEXT
-cluster1.kafka.eagle.sasl.mechanism=SCRAM-SHA-256
-cluster1.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="admin" password="admin-secret";
+cluster1.efak.sasl.enable=false
+cluster1.efak.sasl.protocol=SASL_PLAINTEXT
+cluster1.efak.sasl.mechanism=SCRAM-SHA-256
+cluster1.efak.sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="admin" password="admin-secret";
 # If not set, the value can be empty
-cluster1.kafka.eagle.sasl.client.id=
+cluster1.efak.sasl.client.id=
 # Add kafka cluster cgroups
-cluster1.kafka.eagle.sasl.cgroup.enable=false
-cluster1.kafka.eagle.sasl.cgroup.topics=kafka_ads01,kafka_ads02
+cluster1.efak.sasl.cgroup.enable=false
+cluster1.efak.sasl.cgroup.topics=kafka_ads01,kafka_ads02
 
-cluster2.kafka.eagle.sasl.enable=true
-cluster2.kafka.eagle.sasl.protocol=SASL_PLAINTEXT
-cluster2.kafka.eagle.sasl.mechanism=PLAIN
-cluster2.kafka.eagle.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="admin" password="admin-secret";
-cluster2.kafka.eagle.sasl.client.id=
-cluster2.kafka.eagle.sasl.cgroup.enable=false
-cluster2.kafka.eagle.sasl.cgroup.topics=kafka_ads03,kafka_ads04
+cluster2.efak.sasl.enable=true
+cluster2.efak.sasl.protocol=SASL_PLAINTEXT
+cluster2.efak.sasl.mechanism=PLAIN
+cluster2.efak.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="admin" password="admin-secret";
+cluster2.efak.sasl.client.id=
+cluster2.efak.sasl.cgroup.enable=false
+cluster2.efak.sasl.cgroup.topics=kafka_ads03,kafka_ads04
 
 # Default use sqlite to store data
-kafka.eagle.driver=org.sqlite.JDBC
+efak.driver=org.sqlite.JDBC
 # It is important to note that the '/hadoop/kafka-eagle/db' path must be exist.
-kafka.eagle.url=jdbc:sqlite:/hadoop/kafka-eagle/db/ke.db
-kafka.eagle.username=root
-kafka.eagle.password=smartloli
+efak.url=jdbc:sqlite:/hadoop/kafka-eagle/db/ke.db
+efak.username=root
+efak.password=smartloli
 
 # (Optional) set mysql address
-#kafka.eagle.driver=com.mysql.jdbc.Driver
-#kafka.eagle.url=jdbc:mysql://127.0.0.1:3306/ke?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-#kafka.eagle.username=root
-#kafka.eagle.password=smartloli</code></pre></div>
-        <h2>5. Start the Kafka Eagle server</h2>
+#efak.driver=com.mysql.jdbc.Driver
+#efak.url=jdbc:mysql://127.0.0.1:3306/ke?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+#efak.username=root
+#efak.password=smartloli</code></pre></div>
+        <h2>5. Start the EFAK server</h2>
         <p>In the <code>$KE_HOME/bin</code> directory, there is a <code>ke.sh</code> script file. Execute the start
           command as follows:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
 chmod +x ke.sh 
 ./ke.sh start</code></pre></div>
-        <p>After that, when the Kafka Eagle server is restarted or stopped, execute the following command:</p>
+        <p>After that, when the EFAK server is restarted or stopped, execute the following command:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh restart
 ke.sh stop</code></pre></div>
         <p>As shown in the following figure:</p>

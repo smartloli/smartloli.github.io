@@ -12,11 +12,11 @@
   <link rel="shortcut icon" href="../../../images/favicon.ico">
   <script>
     var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
 </head>
@@ -27,7 +27,7 @@
       <div class="wrap"><a href="" class="nav-home"><img
             style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
             src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
-            class="blur-label">Kafka-</span>Eagle</a>
+            class="blur-label">EFAK</span></a>
         <ul class="nav-site nav-site-internal">
           <li><a href="../../../index.html">Home</a></li>
           <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
@@ -35,7 +35,8 @@
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
           <li><a href="../../article/wechat.html">Articles</a></li>
           <li><a href="../../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -43,7 +44,7 @@
         <div class="nav-docs section">
           <h5>Introduce</h5>
           <ul>
-            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is EFAK</a></li>
             <li><a href="../introduce/getting-started.html">Getting Started</a></li>
           </ul>
         </div>
@@ -55,7 +56,7 @@
             <li><a href="../installation/windows.html">Install on Windows</a></li>
             <li><a href="../installation/configuration.html">Configuration</a></li>
             <li><a href="../installation/security.html">Security</a></li>
-            <li><a href="../installation/upgrade.html">Upgrade Kafka Eagle</a></li>
+            <li><a href="../installation/upgrade.html">Upgrade EFAK</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -99,43 +100,64 @@
         <h2>Overview</h2>
         <p>Use the SQL statement to the news data visualization in topic, for SQL queries, and table names field need to
           use double quotes to mark, example SQL is as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from ke_test_topic where `partition` in (0,1,2) limit 100</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select * from ke_test_topic where `partition` in (0,1,2) limit 100</code></pre>
+        </div>
         <p>As shown in the following figure:</p>
         <img alt="kafka_edit" style="width:800px;" src="../../../images/docs/kafka_ksql_v2@2x.png">
         <h2>DataSets</h2>
         <img alt="kafka_edit" style="width:800px;" src="../../../images/docs/kafka_ksql_result_v2@2x.png">
         <div class="admonition note">
           <p class="first admonition-title">Note</p>
-          <p class="last">Access to topic message data, depending on the underlying interface record of the earliest and latest offset,
-          the default display up to 5000 records.</p>
+          <p class="last">Access to topic message data, depending on the underlying interface record of the earliest and
+            latest offset,
+            the default display up to 5000 records.</p>
         </div>
         <h2>Parse JSONObject Or JSONArrays</h2>
         <p>Kafka topic datasets like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">[{"id":123,"name":"smartloli"},{"id":456,"name":"smartloli2"},{"id":789,"name":"smartloli3"}]</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">[{"id":123,"name":"smartloli"},{"id":456,"name":"smartloli2"},{"id":789,"name":"smartloli3"}]</code></pre>
+        </div>
         <p>Then you can use sql query topic like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSONS(msg,'name') from topic_name where `partition` in (0) limit 10</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select JSONS(msg,'name') from topic_name where `partition` in (0) limit 10</code></pre>
+        </div>
         <p>When Kafka topic datasets like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">{"id":123,"name":"smartloli001"}</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">{"id":123,"name":"smartloli001"}</code></pre>
+        </div>
         <p>Then you can use sql query topic like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSON(msg,'name') from topic_name where `partition` in (0) limit 10</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select JSON(msg,'name') from topic_name where `partition` in (0) limit 10</code></pre>
+        </div>
         <p>Using <code>and</code> syntax in SQL</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select JSON(msg,'name') from topic_name where `partition` in (0) and JSON(msg,'name') = 'smartloli001' limit 10</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select JSON(msg,'name') from topic_name where `partition` in (0) and JSON(msg,'name') = 'smartloli001' limit 10</code></pre>
+        </div>
         <h2>Filter Query [where ... and]</h2>
         <p>Kafka topic datasets like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">kafka-eagle-01
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">kafka-eagle-01
 kafka-eagle-02
 kafka-eagle-02
 kafka-eagle-03
 kafka-eagle-03
 ...
 kafka-eagle-03
-kafka-eagle-04</code></pre></div>
+kafka-eagle-04</code></pre>
+        </div>
         <p>Then you can use sql query topic like this:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg = 'kafka-eagle-03' limit 10</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg = 'kafka-eagle-03' limit 10</code></pre>
+        </div>
         <p>Using <code>like</code> syntax in SQL</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg like 'kafka-eagle%' limit 10</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg like 'kafka-eagle%' limit 10</code></pre>
+        </div>
         <p>Or</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg like '%kafka-eagle%' limit 10</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">select * from topic_name where `partition` in (0) and msg like '%kafka-eagle%' limit 10</code></pre>
+        </div>
       </div>
     </section>
     <footer class="wrap">

@@ -12,11 +12,11 @@
   <link rel="shortcut icon" href="../../../images/favicon.ico">
   <script>
     var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
 </head>
@@ -24,7 +24,10 @@
 <body>
   <div class="container">
     <div class="nav-main">
-      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+      <div class="wrap"><a href="" class="nav-home"><img
+            style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
+            src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
+            class="blur-label">EFAK</span></a>
         <ul class="nav-site nav-site-internal">
           <li><a href="../../../index.html">Home</a></li>
           <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
@@ -32,7 +35,8 @@
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
           <li><a href="../../article/wechat.html">Articles</a></li>
           <li><a href="../../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -40,7 +44,7 @@
         <div class="nav-docs section">
           <h5>Introduce</h5>
           <ul>
-            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is EFAK</a></li>
             <li><a href="../introduce/getting-started.html">Getting Started</a></li>
           </ul>
         </div>
@@ -52,7 +56,7 @@
             <li><a href="../installation/windows.html">Install on Windows</a></li>
             <li><a href="../installation/configuration.html">Configuration</a></li>
             <li><a href="../installation/security.html">Security</a></li>
-            <li><a href="../installation/upgrade.html">Upgrade Kafka Eagle</a></li>
+            <li><a href="../installation/upgrade.html">Upgrade EFAK</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -91,29 +95,42 @@
       </div>
       <div class="inner-content">
         <h1>Advanced</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> > Advanced</div>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> >
+          Advanced</div>
         <h2>Overview</h2>
-        <p>Kafka Eagle has very low requirements for server hardware. Only 1 core of CPU and 2GB of memory can run, and it supports the whole platform (Linux, macOS, Windows). At the same time, Kafka eagle can manage multiple Kafka clusters (without installing a Kafka Eagle service for each Kafka cluster).</p>
+        <p>EFAK has very low requirements for server hardware. Only 1 core of CPU and 2GB of memory can run, and it
+          supports the whole platform (Linux, macOS, Windows). At the same time, EFAK can manage multiple Kafka clusters
+          (without installing a EFAK service for each Kafka cluster).</p>
         <h2>Advanced</h2>
         <h3>KSQL</h3>
-        <p>Users can easily use <a href="../quickstart/ksql.html" style="text-decoration:none;">KSQL</a>, can quickly query the data in topic.</p>
+        <p>Users can easily use <a href="../quickstart/ksql.html" style="text-decoration:none;">KSQL</a>, can quickly
+          query the data in topic.</p>
         <h3>Consumers</h3>
-        <p>Through the <a href="../quickstart/consumers.html" style="text-decoration:none;">Consumers</a> module. Users can view the runtime of consumer programs intuitively, and analyze and judge the health of applications with more graphs.</p>
+        <p>Through the <a href="../quickstart/consumers.html" style="text-decoration:none;">Consumers</a> module. Users
+          can view the runtime of consumer programs intuitively, and analyze and judge the health of applications with
+          more graphs.</p>
         <h3>Bash</h3>
-        <p>Manage and view Kafka Eagle process service status through <code>ke.sh</code> script <a href="../quickstart/shell.html" style="text-decoration:none;">command</a>.</p>
+        <p>Manage and view EFAK process service status through <code>ke.sh</code> script <a
+            href="../quickstart/shell.html" style="text-decoration:none;">command</a>.</p>
         <h4>JDK Encoding</h4>
-        <p>When you deploy Kafka Eagle on the server where it is installed, the encode of the installed JDK is not UTF-8. When you use the mock feature of Kafka eagle, you will get an exception when sending data in Unicode encoding format.</p>
+        <p>When you deploy EFAK on the server where it is installed, the encode of the installed JDK is not UTF-8. When
+          you use the mock feature of EFAK, you will get an exception when sending data in Unicode encoding format.</p>
         <p>Then, You can run the following command:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text"></code>ke.sh jdk</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text"></code>ke.sh jdk</code></pre>
+        </div>
         <img alt="ke_jdk" style="width:800px;" src="../../../images/docs/ke_jdk@2x.png">
         <h4>GC</h4>
-        <p>You can also view the process of Kafka Eagle by executing <code>gc</code> command:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text"></code>ke.sh gc</code></pre></div>
+        <p>You can also view the process of EFAK by executing <code>gc</code> command:</p>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text"></code>ke.sh gc</code></pre>
+        </div>
         <img alt="ke_jdk" style="width:800px;" src="../../../images/docs/ke_gc@2x.png">
       </div>
     </section>
     <footer class="wrap">
-      <div class="center">Copyright © 2021 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+      <div class="center">Copyright © 2021 all right reserved, powered by <a href="" target="_blank">smartloli</a>.
+      </div>
     </footer>
   </div>
 </body>

@@ -12,11 +12,11 @@
   <link rel="shortcut icon" href="../../../images/favicon.ico">
   <script>
     var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
 </head>
@@ -24,7 +24,10 @@
 <body>
   <div class="container">
     <div class="nav-main">
-      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+      <div class="wrap"><a href="" class="nav-home"><img
+            style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
+            src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
+            class="blur-label">EFAK</span></a>
         <ul class="nav-site nav-site-internal">
           <li><a href="../../../index.html">Home</a></li>
           <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
@@ -32,7 +35,8 @@
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
           <li><a href="../../article/wechat.html">Articles</a></li>
           <li><a href="../../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -40,7 +44,7 @@
         <div class="nav-docs section">
           <h5>Introduce</h5>
           <ul>
-            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is EFAK</a></li>
             <li><a href="../introduce/getting-started.html">Getting Started</a></li>
           </ul>
         </div>
@@ -52,7 +56,7 @@
             <li><a href="../installation/windows.html">Install on Windows</a></li>
             <li><a href="../installation/configuration.html">Configuration</a></li>
             <li><a href="../installation/security.html">Security</a></li>
-            <li><a href="../installation/upgrade.html">Upgrade Kafka Eagle</a></li>
+            <li><a href="../installation/upgrade.html">Upgrade EFAK</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -91,17 +95,28 @@
       </div>
       <div class="inner-content">
         <h1>Introduction</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> > Introduction</div>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> >
+          Introduction</div>
         <h2>Overview</h2>
-        <p>In the development work, consumer in the Kafka cluster message, data change is our concern, when the premise of business is not complicated, we can use the Kafka command to provide tools with Zookeeper client tools, you can easily finish our work. With the complexity of the business, increase Group and Topic, then we use Kafka to provide command tools, already felt powerless, then the Kafka monitoring system at the moment is particularly important, we need to observe the details of consumer applications.</p>
-        <p>There are so many excellent open source monitor systems in the industry. In the early stage, we were useing open source system, but with the rapid development of business, as well as some specific requirements of Internet Co, the current open source monitor systems does not quite meet the criteria of performance, extendibility and efficiency.</p>
-        <p>Therefore, in the past time, starting from the needs of the Internet Co, starting from the DEVS you use experience and feedback, combined with some of the industry's large open source Kafka monitoring system, starting with some thoughts on monitoring, we were designed and developed of the kafka monitoring system. So we called <a href="http://www.kafka-eagle.org/" style="text-decoration:none;">Kafka Eagle</a>.</p>
+        <p>In the development work, consumer in the Kafka cluster message, data change is our concern, when the premise
+          of business is not complicated, we can use the Kafka command to provide tools with Zookeeper client tools, you
+          can easily finish our work. With the complexity of the business, increase Group and Topic, then we use Kafka
+          to provide command tools, already felt powerless, then the Kafka monitoring system at the moment is
+          particularly important, we need to observe the details of consumer applications.</p>
+        <p>There are so many excellent open source monitor systems in the industry. In the early stage, we were useing
+          open source system, but with the rapid development of business, as well as some specific requirements of
+          Internet Co, the current open source monitor systems does not quite meet the criteria of performance,
+          extendibility and efficiency.</p>
+        <p>Therefore, in the past time, starting from the needs of the Internet Co, starting from the DEVS you use
+          experience and feedback, combined with some of the industry's large open source Kafka monitoring system,
+          starting with some thoughts on monitoring, we were designed and developed of the kafka monitoring system. So
+          we called <a href="http://www.kafka-eagle.org/" style="text-decoration:none;">EFAK</a>.</p>
         <div class="admonition note">
           <p class="first admonition-title">Note</p>
-          <p class="last">Kafka Eagle aims at becoming a easy and high-performance monitoring system.</p>
+          <p class="last">EFAK aims at becoming a easy and high-performance monitoring system.</p>
         </div>
         <h2>Background</h2>
-        <p>There are four reasons to design Kafka Eagle system:</p>
+        <p>There are four reasons to design EFAK system:</p>
         <ul>
           <li>Apache Kafka does not officially provide monitoring systems or pages.</li>
           <li>Open source Kafka monitoring system has too few functions or suspension of maintenance.</li>
@@ -112,7 +127,8 @@
       </div>
     </section>
     <footer class="wrap">
-      <div class="center">Copyright © 2021 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+      <div class="center">Copyright © 2021 all right reserved, powered by <a href="" target="_blank">smartloli</a>.
+      </div>
     </footer>
   </div>
 </body>

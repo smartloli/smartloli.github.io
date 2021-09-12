@@ -12,11 +12,11 @@
   <link rel="shortcut icon" href="../../../images/favicon.ico">
   <script>
     var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
 </head>
@@ -24,7 +24,10 @@
 <body>
   <div class="container">
     <div class="nav-main">
-      <div class="wrap"><a href="" class="nav-home"><img style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;" src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span class="blur-label">Kafka-</span>Eagle</a>
+      <div class="wrap"><a href="" class="nav-home"><img
+            style="border: 2px solid #fff;border-radius: 50%;margin-top: 4px;margin-left: 10px;float: left;"
+            src="../../../images/ke_login.png" width="40" height="40" class="nav-logo">&nbsp;<span
+            class="blur-label">EFAK</span></a>
         <ul class="nav-site nav-site-internal">
           <li><a href="../../../index.html">Home</a></li>
           <!-- <li><a href="https://docs.kafka-eagle.org/" target="_blank">Docs</a></li> -->
@@ -32,7 +35,8 @@
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
           <li><a href="../../article/wechat.html">Articles</a></li>
           <li><a href="../../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -40,7 +44,7 @@
         <div class="nav-docs section">
           <h5>Introduce</h5>
           <ul>
-            <li><a href="../introduce/what-is-kafka-eagle.html">What is Kafka Eagle</a></li>
+            <li><a href="../introduce/what-is-kafka-eagle.html">What is EFAK</a></li>
             <li><a href="../introduce/getting-started.html">Getting Started</a></li>
           </ul>
         </div>
@@ -52,7 +56,7 @@
             <li><a href="../installation/windows.html">Install on Windows</a></li>
             <li><a href="../installation/configuration.html">Configuration</a></li>
             <li><a href="../installation/security.html">Security</a></li>
-            <li><a href="../installation/upgrade.html">Upgrade Kafka Eagle</a></li>
+            <li><a href="../installation/upgrade.html">Upgrade EFAK</a></li>
           </ul>
         </div>
         <div class="nav-docs section">
@@ -91,9 +95,11 @@
       </div>
       <div class="inner-content">
         <h1>Data Collection</h1>
-        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> > Data Collection</div>
+        <div class="subHeader"><i class="fa fa-home"></i> > <a href="" style="text-decoration:none;">Architecture</a> >
+          Data Collection</div>
         <h2>Overview</h2>
-        <p>Monitor data is essential in a monitor system for the following analysis, graph, and alarm. How does kafka eagle deal with the problem of data collection?</p>
+        <p>Monitor data is essential in a monitor system for the following analysis, graph, and alarm. How does EFAK
+          deal with the problem of data collection?</p>
         <p>For Kafka, that we can collect the following data</p>
         <ul>
           <li>Kafka broker common machine loading information: memory, cpu, IP, version etc.</li>
@@ -104,50 +110,71 @@
         <img alt="ke_arch" style="width:800px;" src="../../../images/docs/ke_arch@2x.png">
         <p>Let's focus on the three representative categories above.</p>
         <h2>Kafka Machine Loading Information</h2>
-        <p>The collection of this category is universal. We can collect data through Kafka broker JMX, Kafka API etc.</p>
-        <p>It should be noted here that if data acquisition fails, it is necessary to insist on whether the network is limited, such as firewall policy.</p>
-        <p>We can test whether the corresponding port is available on the server where Kafka Eagle is deployed. The command is as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text"></code># Test Kafka Broker Server
+        <p>The collection of this category is universal. We can collect data through Kafka broker JMX, Kafka API etc.
+        </p>
+        <p>It should be noted here that if data acquisition fails, it is necessary to insist on whether the network is
+          limited, such as firewall policy.</p>
+        <p>We can test whether the corresponding port is available on the server where EFAK is deployed. The command is
+          as follows:</p>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text"></code># Test Kafka Broker Server
 telnet kafka01 9092
 # Test Kafka Broker JMX
 telnet kafka01 9999
 # Test Zookeeper Server
-telnet zk01 2181</code></pre></div>
-        <p>For the introduction of JMX, please visit <a href="../quickstart/metrics.html" style="text-decoration:none;">here</a>.</p>
+telnet zk01 2181</code></pre>
+        </div>
+        <p>For the introduction of JMX, please visit <a href="../quickstart/metrics.html"
+            style="text-decoration:none;">here</a>.</p>
         <div class="admonition note">
           <p class="first admonition-title">Note</p>
-          <p class="last">For Kafka Broker JMX port, it can be set to any available port on the server, and Kafka Eagle will automatically identify.</p>
+          <p class="last">For Kafka Broker JMX port, it can be set to any available port on the server, and EFAK will
+            automatically identify.</p>
         </div>
         <h2>Service Monitor Data</h2>
-        <p>Service indicators such as QPS, TPS and RT reflect the performance of Kafka Broker services. These indicators are collected by different timers. After has finished collection, the collected data (from JMX or API) is stored in the database (such as MySQL or SQLite). Finally, the data is rendered in the dashboard to form a friendly graph web page.</p>
+        <p>Service indicators such as QPS, TPS and RT reflect the performance of Kafka Broker services. These indicators
+          are collected by different timers. After has finished collection, the collected data (from JMX or API) is
+          stored in the database (such as MySQL or SQLite). Finally, the data is rendered in the dashboard to form a
+          friendly graph web page.</p>
         <div class="admonition note">
           <p class="first admonition-title">Note</p>
-          <p class="last">When rendering the graphics, if the page display is abnormal, the static resources are not loaded successfully. The reason may be that the server has nginx installed, which limits the size of static resources (such as CSS, JavaScript, etc.). Users can modify the limit size of nginx on the server.</p>
+          <p class="last">When rendering the graphics, if the page display is abnormal, the static resources are not
+            loaded successfully. The reason may be that the server has nginx installed, which limits the size of static
+            resources (such as CSS, JavaScript, etc.). Users can modify the limit size of nginx on the server.</p>
         </div>
         <p>You can check if static resources are limited:</p>
         <h4>Step1</h4>
         <p>Open the browser review element, switch to the network module, and check <code>Disable cache</code>.</p>
         <img alt="part1" style="width:800px;" src="../../../images/docs/chrome_network@2x.png">
         <h4>Step2</h4>
-        <p>Switch to the console module, refresh the browser, and observe whether the console module is abnormal. If there is an exception, you can use the search engine to solve it according to the exception prompt.</p>
+        <p>Switch to the console module, refresh the browser, and observe whether the console module is abnormal. If
+          there is an exception, you can use the search engine to solve it according to the exception prompt.</p>
         <img alt="part1" style="width:800px;" src="../../../images/docs/chrome_console@2x.png">
         <h2>Applications Monitor</h2>
-        <p>Indicators such as consumer groups, consumers, producers, and topics reflect the health of client programs. We can analyze whether our application is normal by observing these indicators on the Kafka Eagle web page.</p>
-        <p>We don't need to make any settings for these indicator data. After the client program starts, Kafka Eagle will automatically identify, collect and store the data.</p>
+        <p>Indicators such as consumer groups, consumers, producers, and topics reflect the health of client programs.
+          We can analyze whether our application is normal by observing these indicators on the EFAK web page.</p>
+        <p>We don't need to make any settings for these indicator data. After the client program starts, EFAK will
+          automatically identify, collect and store the data.</p>
         <div class="admonition note">
           <p class="first admonition-title">Note</p>
-          <p class="last">If the Kafka Eagle log throws an exception when collecting data, check whether the configuration file setting of Kafka Eagle is correct.</p>
+          <p class="last">If the EFAK log throws an exception when collecting data, check whether the configuration file
+            setting of EFAK is correct.</p>
         </div>
         <p>If your Kafka version is less than 0.10.x (0.8.x, or 0.9.x etc.), set as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text"></code># Set Kafka Offsets Storage
-cluster1.kafka.eagle.offset.storage=zk</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text"></code># Set Kafka Offsets Storage
+cluster1.efak.offset.storage=zk</code></pre>
+        </div>
         <p>If your Kafka version is greater than 0.10.x (1.x, or 2.x etc.), set as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text"></code># Set Kafka Offsets Storage
-cluster1.kafka.eagle.offset.storage=kafka</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text"></code># Set Kafka Offsets Storage
+cluster1.efak.offset.storage=kafka</code></pre>
+        </div>
       </div>
     </section>
     <footer class="wrap">
-      <div class="center">Copyright © 2021 all right reserved, powered by <a href="" target="_blank">smartloli</a>.</div>
+      <div class="center">Copyright © 2021 all right reserved, powered by <a href="" target="_blank">smartloli</a>.
+      </div>
     </footer>
   </div>
 </body>
