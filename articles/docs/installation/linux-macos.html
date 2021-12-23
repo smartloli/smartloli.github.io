@@ -194,10 +194,21 @@ cluster1.efak.broker.size=10
 cluster2.efak.broker.size=20
 
 # Zkcli limit -- Zookeeper cluster allows the number of clients to connect to
-kafka.zk.limit.size=25
+# If you enable distributed mode, you can set value to 4 or 8
+kafka.zk.limit.size=16
 
 # EFAK webui port -- WebConsole port access address
 efak.webui.port=8048
+
+######################################
+# EFAK enable distributed
+######################################
+efak.distributed.enable=false
+# master worknode set status to master, other node set status to slave
+efak.cluster.mode.status=slave
+# deploy efak server address
+efak.worknode.master.host=localhost
+efak.worknode.port=8085
 
 # Kafka offset storage -- Offset stored in a Kafka cluster, if stored in the zookeeper, you can not use this option
 cluster1.efak.offset.storage=kafka
@@ -247,17 +258,33 @@ efak.password=smartloli
 #efak.url=jdbc:mysql://127.0.0.1:3306/ke?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
 #efak.username=root
 #efak.password=smartloli</code></pre></div>
-        <h2>5. Start the EFAK server</h2>
+        <h2>5. Start the EFAK server (Standalone)</h2>
         <p>In the <code>$KE_HOME/bin</code> directory, there is a <code>ke.sh</code> script file. Execute the start
           command as follows:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
 chmod +x ke.sh 
-./ke.sh start</code></pre></div>
+ke.sh start</code></pre></div>
         <p>After that, when the EFAK server is restarted or stopped, execute the following command:</p>
         <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh restart
 ke.sh stop</code></pre></div>
         <p>As shown in the following figure:</p>
         <img alt="Startup" style="width:800px;" src="../../../images/docs/startup@2x.png">
+      <h2>6. Start the EFAK server (Distributed)</h2>
+        <p>In the <code>$KE_HOME/bin</code> directory, there is a <code>ke.sh</code> script file. Execute the start
+          command as follows:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
+# sync efak package to other worknode node
+# if $KE_HOME is /data/soft/new/efak
+for i in `cat $KE_HOME/conf/works`;do scp -r $KE_HOME $i:/data/soft/new;done
+
+# sync efak server .bash_profile environment
+for i in `cat $KE_HOME/conf/works`;do scp -r ~/.bash_profile $i:~/;done
+
+chmod +x ke.sh 
+ke.sh cluster start</code></pre></div>
+        <p>After that, when the EFAK server is restarted or stopped, execute the following command:</p>
+        <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh cluster restart
+ke.sh cluster stop</code></pre></div>
       </div>
     </section>
     <footer class="wrap">
