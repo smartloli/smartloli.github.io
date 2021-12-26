@@ -12,11 +12,11 @@
   <link rel="shortcut icon" href="../../../images/favicon.ico">
   <script>
     var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f818225b47832c7c649070bf46855a5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
 </head>
@@ -35,7 +35,8 @@
           <li><a href="https://www.cnblogs.com/smartloli" target="_blank">Blog</a></li>
           <li><a href="../../article/wechat.html">Articles</a></li>
           <li><a href="../../about/me.html">About</a></li>
-        </ul><span class="nav-docs-right">Need some help? Let us know! <a href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
+        </ul><span class="nav-docs-right">Need some help? Let us know! <a
+            href="mailto:smartloli.org@gmail.com">smartloli.org@gmail.com</a></span>
       </div>
     </div>
     <section class="content wrap documentationContent">
@@ -99,12 +100,12 @@
         <h2>Overview</h2>
         <p>This page explains how to install EFAK dependencies, download and install EFAK, get the service
           up and running on your Linux or macOS system, and the installation package details.</p>
-        <div class="admonition note">          
+        <div class="admonition note">
           <p class="first admonition-title">Note on upgrading</p>
           <p class="last">While the process for upgrading EFAK is very similar to
-          installing EFAK, there are some key backup steps you should perform. Read <a href="upgrade.html"
-            style="text-decoration:none;">Upgrading EFAK</a> for tips and guidance on updating an existing
-          installation.
+            installing EFAK, there are some key backup steps you should perform. Read <a href="upgrade.html"
+              style="text-decoration:none;">Upgrading EFAK</a> for tips and guidance on updating an existing
+            installation.
           </p>
         </div>
         <h2>1. Download and install</h2>
@@ -141,12 +142,14 @@
             style="text-decoration:none;">download JDK</a>.</p>
         <h3>JAVA_HOME Configure</h3>
         <p>Extract the binary installation package to the specified directory:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">cd /usr/java
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">cd /usr/java
 tar -zxvf jdk-xxxx.tar.gz
 mv jdk-xxxx jdk1.8
 vi /etc/profile
 export JAVA_HOME=/usr/java/jdk1.8
-export PATH=$PATH:$JAVA_HOME/bin</code></pre></div>
+export PATH=$PATH:$JAVA_HOME/bin</code></pre>
+        </div>
         <p>Then, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.</p>
         <div class="admonition note">
           <p class="first admonition-title">Note</p>
@@ -154,28 +157,33 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre></div>
         </div>
         <p>Finally, we input <code>java -version</code>, according to the following information:</p>
         <div class="admonition note">
-            <p class="first admonition-title">Note</p>
-            <p class="last">java version "1.8.0_60"<br />
-          Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br />
-          Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)</p>
+          <p class="first admonition-title">Note</p>
+          <p class="last">java version "1.8.0_60"<br />
+            Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br />
+            Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)</p>
         </div>
         <h2>3. Extract EFAK</h2>
         <p>Here we extract to <code>/data/soft/new</code> directory and extract:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">tar -zxvf efak-xxx-bin.tar.gz</code></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">tar -zxvf efak-xxx-bin.tar.gz</code></div>
         If you have installed the version before, delete the modified version, and rename the current version, as shown
         below:
         <div class="highlight"><pre><code class="language-text" data-lang="text">rm -rf efak
-mv efak-xxx efak</code></pre></div>        
+mv efak-xxx efak</code></pre>
+        </div>
         <p>Then, configure EFAK profile</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">vi /etc/profile
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">vi /etc/profile
 export KE_HOME=/data/soft/new/efak
-export PATH=$PATH:$KE_HOME/bin</code></pre></div>        
+export PATH=$PATH:$KE_HOME/bin</code></pre>
+        </div>
         <p>Finally, we use the <code>. /etc/profile</code> to enable the configuration to take effect immediately.</p>
         <h2>4. Configure EFAK system file</h2>
         <p>Configure EFAK according to the actual situation of its own Kafka cluster, For example, zookeeper
           address, version type of Kafka cluster (zk for low version, kafka for high version), Kafka cluster with
           security authentication enabled etc.</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/conf
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">cd ${KE_HOME}/conf
 vi system-config.properties
 
 # Multi zookeeper&kafka cluster list -- The client connection address of the Zookeeper cluster is set here
@@ -257,22 +265,28 @@ efak.password=smartloli
 #efak.driver=com.mysql.jdbc.Driver
 #efak.url=jdbc:mysql://127.0.0.1:3306/ke?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
 #efak.username=root
-#efak.password=smartloli</code></pre></div>
+#efak.password=smartloli</code></pre>
+        </div>
         <h2>5. Start the EFAK server (Standalone)</h2>
         <p>In the <code>$KE_HOME/bin</code> directory, there is a <code>ke.sh</code> script file. Execute the start
           command as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
 chmod +x ke.sh 
-ke.sh start</code></pre></div>
+ke.sh start</code></pre>
+        </div>
         <p>After that, when the EFAK server is restarted or stopped, execute the following command:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh restart
-ke.sh stop</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">ke.sh restart
+ke.sh stop</code></pre>
+        </div>
         <p>As shown in the following figure:</p>
         <img alt="Startup" style="width:800px;" src="../../../images/docs/startup@2x.png">
-      <h2>6. Start the EFAK server (Distributed)</h2>
+        <h2>6. Start the EFAK server (Distributed)</h2>
         <p>In the <code>$KE_HOME/bin</code> directory, there is a <code>ke.sh</code> script file. Execute the start
           command as follows:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">cd ${KE_HOME}/bin
 # sync efak package to other worknode node
 # if $KE_HOME is /data/soft/new/efak
 for i in `cat $KE_HOME/conf/works`;do scp -r $KE_HOME $i:/data/soft/new;done
@@ -281,10 +295,15 @@ for i in `cat $KE_HOME/conf/works`;do scp -r $KE_HOME $i:/data/soft/new;done
 for i in `cat $KE_HOME/conf/works`;do scp -r ~/.bash_profile $i:~/;done
 
 chmod +x ke.sh 
-ke.sh cluster start</code></pre></div>
+ke.sh cluster start</code></pre>
+        </div>
         <p>After that, when the EFAK server is restarted or stopped, execute the following command:</p>
-        <div class="highlight"><pre><code class="language-text" data-lang="text">ke.sh cluster restart
-ke.sh cluster stop</code></pre></div>
+        <div class="highlight">
+          <pre><code class="language-text" data-lang="text">ke.sh cluster restart
+ke.sh cluster stop</code></pre>
+        </div>
+        <p>As shown in the following figure:</p>
+        <img alt="DistributeStartup" style="width:800px;" src="../../../images/docs/efak_distribute_startup.png">
       </div>
     </section>
     <footer class="wrap">
